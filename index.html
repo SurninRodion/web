@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--google fonts-->
+    <!--styles.css-->
+    <title>Рецепты</title>
+</head>
+<body>
+ <header class="header">
+    <div class="header__logo">Recipes</div> <!--Тут не уверен, может просто делать ссылкой..-->
+    <nav class="header__navigation">
+        <ul class="header__navigation-list">
+            <li class="header__navigation-item">
+                <a class="header__navigation-link header__navigation-link-active" href="">Главная</a>
+            </li>
+            <li class="header__navigation-item">
+                <a class="header__navigation-link" href="">Рецепты</a>
+            </li>
+            <li class="header__navigation-item">
+                <a class="header__navigation-link" href="">Избранное</a>
+            </li>
+        </ul>
+    </nav>
+        <div class="header__login">
+            <button class="header__login-button" name="login" value="Login">
+                <img src="#" alt="Войти"/>
+            </button>
+        <!-- кнопка с ссылкой+картинкой? -->>
+        </div>
+
+ </header>   
+ <main class="main">
+    <div class="main__first-section">
+        <div class="main__first-section-container">
+            <h1 class="main__first-section-container-title">Готовь и делись рецептами</h1>
+            <p>Никаких кулинарных книг и блокнотов! Храни все любимые рецепты в одном месте.</p>
+            <button class="main__first-section-button">+ Добавить рецепт</button>
+            <button class="main__first-section-button main__first-section-button--other" href="#">Войти</button>
+        </div>
+                <div><!--картинка справа-->
+                    <img src="#" alt ="jpg"> <!--нужен ли тут класс??-->
+                </div>      
+    </div>
+    
+    <div class="main__second-section">
+        <h2 class="main__second-section-title">Умная сортировка по тегам</h2>
+        <p>Добавляйте рецепты и указывайте наиболее популярные теги. Это позволит быстро находить любые категории</p>
+        <div class="main__second-section-container">
+            <ul class="main__second-section-container-list">
+                <li class="main__second-section-container-item">
+                    <a class="main__second-section-container-link" href="#"><h3>Простые блюда</h3></a>
+                        <img src="#" alt="Простые блюда">
+                        <p>Время приготвления таких блюд не более 1 часа</p> 
+                </li>
+                <li class="main__second-section-container-item">
+                    <a class="main__second-section-container-link" href="#"><h3>Детское</h3></a>
+                    <img src="#" alt="Детское">
+                    <p>Самые полезные блюда которые можно детям любого возраста</p>
+                </li>
+                <li class="main__second-section-container-item">
+                    <a class="main__second-section-container-link" href="#"><h3>От шеф-поваров</h3></a>
+                    <img src="" alt="От шеф-поваров">
+                    <p>Требуют умения, времени и терпения, зато как в ресторане</p>
+                </li>
+                <li class="main__second-section-container-item">
+                    <a class="main__second-section-container-link" href="#"><h3>На праздник</h3></a>
+                    <img src="" alt="На праздник">
+                    <p>Чем удивить гостей, чтобы все были сыты за праздничным столом</p>
+                </li>    
+            </ul>
+        </div>
+    </div>
+
+    <div class="main__third-section">
+        <div class="main__third-section-img"> <!--Картинка в левой части секции--><!--нужен ли тут класс??-->
+            <img src="#" alt="jpg"> 
+            <p>@autor_tag</p>
+        </div>
+            <div class="main__third-section-container">
+                <div class="main__third-section-container-counters">
+                    <div class="main__third-section-container-likes">
+                        <img src="#" alt="likes">
+                        <p>356</p>
+                    </div>
+                        <div class="main__third-section-container-time">
+                        <img src="#" alt="time">
+                        <p>35 минут</p>
+                        </div>    
+                            <div class="main__third-section-container-smile">
+                        <img src="#" alt="Рецепт дня">
+                            </div>
+                </div>
+                        <h2 class="main__third-section-container-title">Тыквенный супчик <br>На кокосовом молоке</h2>
+                        <p>Если у вас осталась тыква, и вы не знаете что с ней <br> сделать, то это решение для вас! Ароматный,<br> согревающий суп-пюре на кокосовом молоке. Можно<br> даже в Пост!</p>            
+            </div>
+    </div>
+
+    <div class="main__fourth-section">
+        <h2 class="main__fourth-section-title">Поиск рецептов</h2>
+        <p>Введите примерное название блюда, а мы по тегам найдем его</p>
+            <div class="main__fourth-section-container">
+                <input type="text" placeholder="Название блюда...." name="search">
+                <button class="main__first-section-container-button" name="Поиск" value="Поиск">Поиск</button>
+                <p>Мясо Деликатесы Пироги Рыба</p>
+            </div>
+    </div>
+  <!--окно при нажатии кнопки "добавить рецепт"-->
+    <div class="main__autorization-form">
+        <h2 class="main__autorization-form-title">Войдите в профиль</h2>
+        <p class="main__autorization-form-text">Добавлять рецепты могут только зарегистрированные пользователи.</p>
+        <div class="main__autorization-form-content">
+            <button class="main__autorization-form-button" type="login" name="main__autorization-form-button-login">Войти</button>
+            <button class="main__autorization-form-button-other" type="sign up" name="main__autorization-form-button-sign-up">Зарегистрироваться</button>
+        </div>
+    </div>
+<!--окно при нажатии кнопки "зарегистрироваться"-->
+    <div class="main__registration-form">
+        <h2 class="main__registration-form-title">Регистрация</h2>
+      <div class="main__registration-form-content">
+        <form class="main__registration-form-style" action ="#" method="post">
+            <label for="name">Имя</label>
+            <input type="name" placeholder="Введите имя: " required>
+            <label for="login">Логин</label>
+            <input type="login" placeholder="Введите логин: " required>
+            <label for="password">Пароль</label>
+            <input type="password" placeholder="Введите пароль: " required>
+            <input type="password" placeholder="Повторите пароль: " required>
+            <button class="main__registration-form-button" type="submit" name="main__registration-form-button-submit">Зарегистрироваться</button>
+            <button class="main__registration-form-button-other" type="cancel" name="main__registration-form-button-cancel">Отмена</button>
+        </form>
+        <a class="main__registration-form-text" href="">У меня уже есть аккаунт</a><!--класс нужен или нет?-->
+      </div>  
+    </div>
+<!--окно при нажатии кнопки "войти"-->
+    <div class="main__login-form">
+        <h2 class="main__login-form-title">Войти</h2>
+        <div class="main__login-form-content">
+            <form class="main__login-form-style" action="#" method="post">
+                <label for="login">Логин</label>
+                <input type="login" placeholder="Логин: " required>
+                <label for="password">Логин</label>
+                <input type="password" placeholder="Пароль: " required>
+                <button class="main__login-form-button" type="submit" name="main__login-form-button-submit">Войти</button>
+                <button class="main__login-form-button-other" type="cancel" name="main__login-form-button-cancel">Отмена</button>
+            </form>
+            <a class="main__registration-form-trxt" href="">У меня ещё нет аккаунта</a><!--класс нужен или нет?-->
+        </div>
+    </div>
+
+ </main>
+ <footer class="footer">
+    <div class="footer__logo">
+    <p>Recipes</p>
+    </div>
+        <div class="footer__copiright-label"><!--может просто <p>...</p>-->
+            <p>© Recipes 2023</p>
+        </div> 
+ </footer>
+</body>
+</html>
