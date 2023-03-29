@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--google fonts-->
-    <!--styles.css-->
+    <!--styles.css <link rel="" stylesheet-->
     <title>Рецепты</title>
 </head>
 <body>
@@ -107,13 +107,13 @@
                 <p>Мясо Деликатесы Пироги Рыба</p>
             </div>
     </div>
-  <!--окно при нажатии кнопки "добавить рецепт"-->
+  <!--окно при нажатии кнопки "добавить рецепт"--> <!--скорее всего можно все кнопки с модификатором определить в один класс, потому что стилистика у них у всех одинаковая-->
     <div class="main__autorization-form">
         <h2 class="main__autorization-form-title">Войдите в профиль</h2>
         <p class="main__autorization-form-text">Добавлять рецепты могут только зарегистрированные пользователи.</p>
         <div class="main__autorization-form-content">
             <button class="main__autorization-form-button" type="login" name="main__autorization-form-button-login">Войти</button>
-            <button class="main__autorization-form-button-other" type="sign up" name="main__autorization-form-button-sign-up">Зарегистрироваться</button>
+            <button class="main__autorization-form-button main__autorization-form-button--other" type="sign up" name="main__autorization-form-button-sign-up">Регистрация</button>
         </div>
     </div>
 <!--окно при нажатии кнопки "зарегистрироваться"-->
@@ -129,7 +129,7 @@
             <input type="password" placeholder="Введите пароль: " required>
             <input type="password" placeholder="Повторите пароль: " required>
             <button class="main__registration-form-button" type="submit" name="main__registration-form-button-submit">Зарегистрироваться</button>
-            <button class="main__registration-form-button-other" type="cancel" name="main__registration-form-button-cancel">Отмена</button>
+            <button class="main__registration-form-button main__registration-form-button--other" type="cancel" name="main__registration-form-button-cancel">Отмена</button>
         </form>
         <a class="main__registration-form-text" href="">У меня уже есть аккаунт</a><!--класс нужен или нет?-->
       </div>  
@@ -144,7 +144,7 @@
                 <label for="password">Логин</label>
                 <input type="password" placeholder="Пароль: " required>
                 <button class="main__login-form-button" type="submit" name="main__login-form-button-submit">Войти</button>
-                <button class="main__login-form-button-other" type="cancel" name="main__login-form-button-cancel">Отмена</button>
+                <button class="main__login-form-button main__login-form-button--other" type="cancel" name="main__login-form-button-cancel">Отмена</button>
             </form>
             <a class="main__registration-form-trxt" href="">У меня ещё нет аккаунта</a><!--класс нужен или нет?-->
         </div>
