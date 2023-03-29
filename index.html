@@ -10,11 +10,11 @@
 </head>
 <body>
  <header class="header">
-    <div class="header__logo">Recipes</div> <!--Тут не уверен, может просто делать ссылкой..-->
+    <a class="header__logo">Recipes</a> <!--Тут не уверен, может просто делать ссылкой..-->
     <nav class="header__navigation">
         <ul class="header__navigation-list">
             <li class="header__navigation-item">
-                <a class="header__navigation-link header__navigation-link-active" href="">Главная</a>
+                <a class="header__navigation-link header__navigation-link--active" href="">Главная</a>
             </li>
             <li class="header__navigation-item">
                 <a class="header__navigation-link" href="">Рецепты</a>
@@ -24,26 +24,25 @@
             </li>
         </ul>
     </nav>
-        <div class="header__login">
-            <button class="header__login-button" name="login" value="Login">
-                <img src="#" alt="Войти"/>
-            </button>
+    <div class="header__login">
+        <button class="header__login-button" name="login" value="Login">
+            <img src="#" alt="Войти"/>
+        </button>
         <!-- кнопка с ссылкой+картинкой? -->>
-        </div>
-
- </header>   
- <main class="main">
-    <div class="main__first-section">
-        <div class="main__first-section-container">
-            <h1 class="main__first-section-container-title">Готовь и делись рецептами</h1>
-            <p>Никаких кулинарных книг и блокнотов! Храни все любимые рецепты в одном месте.</p>
-            <button class="main__first-section-button">+ Добавить рецепт</button>
-            <button class="main__first-section-button main__first-section-button--other" href="#">Войти</button>
-        </div>
-                <div><!--картинка справа-->
-                    <img src="#" alt ="jpg"> <!--нужен ли тут класс??-->
-                </div>      
     </div>
+ </header>
+
+ <main class="main">
+    <section class="first-section">
+        <div class="first-section-container"> <!--подумать над названием класса-->
+            <h1 class="first-section-container__title">Готовь и делись рецептами</h1>
+            <p>Никаких кулинарных книг и блокнотов! Храни все любимые рецепты в одном месте.</p>
+            <button class="first-section-container__button first-section-container__button--add">+ Добавить рецепт</button>
+            <button class="first-section-container__button first-section-container__button--login" href="#">Войти</button>
+        </div>
+                <!--картинка справа-->
+        <img class="first-section-image" src="#" alt ="jpg">        
+    </section>
     
     <div class="main__second-section">
         <h2 class="main__second-section-title">Умная сортировка по тегам</h2>
