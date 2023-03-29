@@ -10,7 +10,7 @@
 </head>
 <body>
  <header class="header">
-    <a class="header__logo">Recipes</a> <!--Тут не уверен, может просто делать ссылкой..-->
+    <a class="header__logo" href="#">Recipes</a> <!--Тут не уверен, может просто делать ссылкой..-->
     <nav class="header__navigation">
         <ul class="header__navigation-list">
             <li class="header__navigation-item">
@@ -33,93 +33,95 @@
  </header>
 
  <main class="main">
-    <section class="first-section">
-        <div class="first-section-container"> <!--подумать над названием класса-->
-            <h1 class="first-section-container__title">Готовь и делись рецептами</h1>
+    <section class="top-block">
+        <div class="top-block-container"> <!--подумать над названием класса-->
+            <h1 class="top-block-container__title">Готовь и делись рецептами</h1>
             <p>Никаких кулинарных книг и блокнотов! Храни все любимые рецепты в одном месте.</p>
-            <button class="first-section-container__button first-section-container__button--add">+ Добавить рецепт</button>
-            <button class="first-section-container__button first-section-container__button--login" href="#">Войти</button>
+            <button class="top-block-container__button top-block-container__button--add">+ Добавить рецепт</button>
+            <button class="top-block-container__button top-block-container__button--login">Войти</button>
         </div>
                 <!--картинка справа-->
-        <img class="first-section-image" src="#" alt ="jpg">        
+            <img class="top-block__image" src="#" alt ="jpg">        
     </section>
     
-    <div class="main__second-section">
-        <h2 class="main__second-section-title">Умная сортировка по тегам</h2>
+    <section class="sort">
+        <h2 class="sort__title">Умная сортировка по тегам</h2>
         <p>Добавляйте рецепты и указывайте наиболее популярные теги. Это позволит быстро находить любые категории</p>
-        <div class="main__second-section-container">
-            <ul class="main__second-section-container-list">
-                <li class="main__second-section-container-item">
-                    <a class="main__second-section-container-link" href="#"><h3>Простые блюда</h3></a>
-                        <img src="#" alt="Простые блюда">
-                        <p>Время приготвления таких блюд не более 1 часа</p> 
+            <ul class="sort__list">
+                <li class="sort__list-item">
+                    <a class="sort__list-item-link" href="#"><h3>Простые блюда</h3></a>
+                    <!--<img class="" src="#" alt="Простые блюда">-->
+                    <p class="sort__list-description">Время приготвления таких блюд не более 1 часа</p> 
                 </li>
-                <li class="main__second-section-container-item">
-                    <a class="main__second-section-container-link" href="#"><h3>Детское</h3></a>
-                    <img src="#" alt="Детское">
-                    <p>Самые полезные блюда которые можно детям любого возраста</p>
+                <li class="sort__list-item">
+                    <a class="sort__list-item-link" href="#"><h3>Детское</h3></a>
+                    <!--<img src="#" alt="Детское">-->
+                    <p class="sort__list-description">Самые полезные блюда которые можно детям любого возраста</p>
                 </li>
-                <li class="main__second-section-container-item">
-                    <a class="main__second-section-container-link" href="#"><h3>От шеф-поваров</h3></a>
-                    <img src="" alt="От шеф-поваров">
-                    <p>Требуют умения, времени и терпения, зато как в ресторане</p>
+                <li class="sort__list-item">
+                    <a class="sort__list-item-link" href="#"><h3>От шеф-поваров</h3></a>
+                    <!--<img src="" alt="От шеф-поваров">-->
+                    <p class="sort__list-description">Требуют умения, времени и терпения, зато как в ресторане</p>
                 </li>
-                <li class="main__second-section-container-item">
-                    <a class="main__second-section-container-link" href="#"><h3>На праздник</h3></a>
-                    <img src="" alt="На праздник">
-                    <p>Чем удивить гостей, чтобы все были сыты за праздничным столом</p>
+                <li class="sort__list-item">
+                    <a class="sort__list-item-link" href="#"><h3>На праздник</h3></a>
+                    <!-- <img src="" alt="На праздник"> -->
+                    <p class="sort__list-description">Чем удивить гостей, чтобы все были сыты за праздничным столом</p>
                 </li>    
             </ul>
-        </div>
-    </div>
+    </section>
 
-    <div class="main__third-section">
-        <div class="main__third-section-img"> <!--Картинка в левой части секции--><!--нужен ли тут класс??-->
+    <section class="Day-decipe">
+        <div class="Day-decipe-img"> <!--Картинка в левой части секции--><!--нужен ли тут класс??-->
             <img src="#" alt="jpg"> 
-            <p>@autor_tag</p>
+            <span class="Day-decipe-img__item">@autor_tag</span>
         </div>
-            <div class="main__third-section-container">
-                <div class="main__third-section-container-counters">
-                    <div class="main__third-section-container-likes">
-                        <img src="#" alt="likes">
-                        <p>356</p>
-                    </div>
-                        <div class="main__third-section-container-time">
-                        <img src="#" alt="time">
-                        <p>35 минут</p>
-                        </div>    
-                            <div class="main__third-section-container-smile">
-                        <img src="#" alt="Рецепт дня">
-                            </div>
+        <div class="Day-decipe-container">
+            <div class="Day-decipe-container__counters">
+                <div class="Day-decipe-container__counters-likes">
+                   <!-- <img src="#" alt="likes">-->
+                    <span class="Day-decipe-container__counters-item">356</span>
                 </div>
-                        <h2 class="main__third-section-container-title">Тыквенный супчик <br>На кокосовом молоке</h2>
-                        <p>Если у вас осталась тыква, и вы не знаете что с ней <br> сделать, то это решение для вас! Ароматный,<br> согревающий суп-пюре на кокосовом молоке. Можно<br> даже в Пост!</p>            
+                <div class="Day-decipe-container__counters-time">
+                    <!--<img src="#" alt="time">-->
+                    <span class="Day-decipe-container__counters-item">35 минут</span>
+                </div>    
+                <div class="Day-decipe-container__smile">
+                    <!--<img src="#" alt="Рецепт дня">-->
+                </div>
             </div>
-    </div>
+            <h2 class="Day-decipe-container__title">Тыквенный супчик <br>На кокосовом молоке</h2>
+            <p class="Day-decipe-container__description">Если у вас осталась тыква, и вы не знаете что с ней <br> сделать, то это решение для вас! Ароматный,<br> согревающий суп-пюре на кокосовом молоке. Можно<br> даже в Пост!</p>            
+        </div>
+    </section>
 
-    <div class="main__fourth-section">
-        <h2 class="main__fourth-section-title">Поиск рецептов</h2>
+    <section class="search">
+        <h2 class="search__title">Поиск рецептов</h2>
         <p>Введите примерное название блюда, а мы по тегам найдем его</p>
-            <div class="main__fourth-section-container">
+            <div class="search-container">
                 <input type="text" placeholder="Название блюда...." name="search">
-                <button class="main__first-section-container-button" name="Поиск" value="Поиск">Поиск</button>
-                <p>Мясо Деликатесы Пироги Рыба</p>
+                <button class="search-container__button" name="Поиск" value="Поиск">Поиск</button>
+                <ul>
+                    <li>Мясо</li>
+                    <li>Деликатесы</li>
+                    <li>Пироги</li>
+                    <li>Рыба</li>
+                </ul>    
             </div>
-    </div>
+    </section>
   <!--окно при нажатии кнопки "добавить рецепт"--> <!--скорее всего можно все кнопки с модификатором определить в один класс, потому что стилистика у них у всех одинаковая-->
-    <div class="main__autorization-form">
-        <h2 class="main__autorization-form-title">Войдите в профиль</h2>
-        <p class="main__autorization-form-text">Добавлять рецепты могут только зарегистрированные пользователи.</p>
-        <div class="main__autorization-form-content">
-            <button class="main__autorization-form-button" type="login" name="main__autorization-form-button-login">Войти</button>
-            <button class="main__autorization-form-button main__autorization-form-button--other" type="sign up" name="main__autorization-form-button-sign-up">Регистрация</button>
+    <div class="autorization-form">
+        <h2 class="autorization-form__title">Войдите в профиль</h2>
+        <p class="autorization-form__text">Добавлять рецепты могут только зарегистрированные пользователи.</p>
+        <div class="autorization-form-content">
+            <button class="autorization-form-button autorization-form-button--login" type="login" name="autorization-form-button-login">Войти</button>
+            <button class="autorization-form-button autorization-form-button--sign-up" type="sign up" name="autorization-form-button-sign-up">Регистрация</button>
         </div>
     </div>
 <!--окно при нажатии кнопки "зарегистрироваться"-->
-    <div class="main__registration-form">
-        <h2 class="main__registration-form-title">Регистрация</h2>
-      <div class="main__registration-form-content">
-        <form class="main__registration-form-style" action ="#" method="post">
+    <div class="registration-form">
+        <h2 class="registration-form__title">Регистрация</h2>
+        <form class="registration-form-style" action ="#" method="post">
             <label for="name">Имя</label>
             <input type="name" placeholder="Введите имя: " required>
             <label for="login">Логин</label>
@@ -127,36 +129,37 @@
             <label for="password">Пароль</label>
             <input type="password" placeholder="Введите пароль: " required>
             <input type="password" placeholder="Повторите пароль: " required>
-            <button class="main__registration-form-button" type="submit" name="main__registration-form-button-submit">Зарегистрироваться</button>
-            <button class="main__registration-form-button main__registration-form-button--other" type="cancel" name="main__registration-form-button-cancel">Отмена</button>
+            <div class="registration-form__buttons-wrapper">
+                <button class="registration-form-button registration-form-button--submit" type="submit" name="registration-form-button-submit">Зарегистрироваться</button>
+                <button class="registration-form-button registration-form-button--cancel" type="cancel" name="registration-form-button-cancel">Отмена</button>
+            </div>
         </form>
-        <a class="main__registration-form-text" href="">У меня уже есть аккаунт</a><!--класс нужен или нет?-->
-      </div>  
+        <a class="registration-form__text" href="">У меня уже есть аккаунт</a><!--класс нужен или нет?--> 
     </div>
 <!--окно при нажатии кнопки "войти"-->
-    <div class="main__login-form">
-        <h2 class="main__login-form-title">Войти</h2>
-        <div class="main__login-form-content">
-            <form class="main__login-form-style" action="#" method="post">
+    <div class="login-form">
+        <h2 class="login-form-title">Войти</h2>
+        <div class="login-form-content">
+            <form class="login-form-style" action="#" method="post">
                 <label for="login">Логин</label>
                 <input type="login" placeholder="Логин: " required>
                 <label for="password">Логин</label>
                 <input type="password" placeholder="Пароль: " required>
-                <button class="main__login-form-button" type="submit" name="main__login-form-button-submit">Войти</button>
-                <button class="main__login-form-button main__login-form-button--other" type="cancel" name="main__login-form-button-cancel">Отмена</button>
+                <div class="login-form__buttons-wrapper">
+                    <button class="login-form-button" type="submit" name="login-form-button-submit">Войти</button>
+                    <button class="login-form-button login-form-button--other" type="cancel" name="login-form-button-cancel">Отмена</button>
+                </div>   
             </form>
-            <a class="main__registration-form-trxt" href="">У меня ещё нет аккаунта</a><!--класс нужен или нет?-->
+            <a class="registration-form-text" href="">У меня ещё нет аккаунта</a>
         </div>
     </div>
-
  </main>
+ 
  <footer class="footer">
-    <div class="footer__logo">
-    <p>Recipes</p>
-    </div>
-        <div class="footer__copiright-label"><!--может просто <p>...</p>-->
-            <p>© Recipes 2023</p>
-        </div> 
+    <a class="footer__logo" href="#">Recipes</a>
+    <div class="footer__copiright-label">
+        <span>© Recipes 2023</span>
+    </div> 
  </footer>
 </body>
 </html>
