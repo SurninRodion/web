@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: local('Montserrat') url(/fonts/montserrat/Montserrat-Black.woff2)
+}
+
+.container {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    height: 2719px;
+    background-color: #FEFEFB;
+
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-left: 120px;
+    padding-right: 120px;
+    max-width: 1440px;
+
+
+}
+
+.header__logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    ;
+    width: 200px;
+    height: 35px;
+    color: #FDB100;
+    text-decoration: none;
+    padding-right: 80px;
+}
+
+.header__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 565px;
+
+}
+
+.header__navigation-list {
+    display: flex;
+    justify-content: space-between;
+    width: 344px;
+    height: 22px;
+}
+
+.header__navigation-item {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #9196A1;
+    list-style-type: none;
+
+}
+
+.header__navigation-link {
+    text-decoration: none;
+    color: #9196A1;
+    font-weight: 400;
+}
+
+.header__navigation-link--active {
+    font-weight: 600;
+    color: #3A3C41;
+}
+
+.top-block {
+    width: 1320px;
+    height: 800px;
+    padding-top: 0px;
+    padding-left: 120px;
+
+}
+
+.top-block-container__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 72px;
+    line-height: 87.77px;
+    font-weight: 700;
+    color: #25292D;
+    text-align: left;
+
+}
+
+.top-block-container__description {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 28px;
+    color: #4A525A;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    text-align: left;
+
+
+}
+
+.top-block-container__buttons {
+    width: 500px;
+
+    display: block;
+
+}
+
+.top-block-container__button {
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 16px;
+    height: 60px;
+    width: 50%;
+    background-color: #FDB100;
+    border: none;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+
+}
+
+.top-block-container__button--login {
+    max-width: 216px;
+    float: right;
+    background-color: transparent;
+    border: 1px solid #FDB100;
+    color: #FDB100;
+}
+
+
+.header__login {
+    display: flex;
+    height: 38px;
+    width: 112px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header__login-button {
+    width: 60px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 2;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #FDB100;
+
+    border: none;
+    background-color: #FEFEFB;
+    outline: none
+}
+
+.top-block__image {
+    display: block;
+    float: right;
+    width: 50%;
+    margin-top: -70px;
+    margin-right: -40px;
+    border-radius: 0px 0px 0px 200px;
+
+}
+
+.top-block-container {
+    display: block;
+    float: left;
+    width: 50%;
+    margin-top: 144px;
+}
