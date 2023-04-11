@@ -1,48 +1,56 @@
 @font-face {
     font-family: "Montserrat";
-    src: url("/fonts/Montserrat-Bold.woff2") format("woff2"),;
-    font-weight:700;
+    src: url("/fonts/Montserrat-Bold.woff2") format("woff2"), ;
+    font-weight: 700;
     font-style: normal;
-    font-display:swap;
-}
-@font-face {
-    font-family: "Montserrat";
-    src: url("/fonts/Montserrat-Medium.woff2") format("woff2"),;
-    font-weight:500;
-    font-style: normal;
-    font-display:swap;
-}
-@font-face {
-    font-family: "Montserrat";
-    src: url("../fonts/Montserrat-Regular.woff2") format("woff2"),;
-    font-weight:400;
-    font-style: normal;
-    font-display:swap;
-}
-@font-face {
-    font-family: "Montserrat";
-    src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"),;
-    font-weight:600;
-    font-style: normal;
-    font-display:swap;
-}
-@font-face {
-    font-family: "Mulish";
-    src: url("../fonts/Mulish-Regular.woff2") format("woff2"),;
-    font-weight:400;
-    font-style: normal;
-    font-display:swap;
+    font-display: swap;
 }
 
-body{
-    position: relative;
+@font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-Medium.woff2") format("woff2"), ;
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), ;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), ;
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Mulish";
+    src: url("../fonts/Mulish-Regular.woff2") format("woff2"), ;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Глобальные свойства для контента */
+body {
     font-family: "Montserrat", sans-serif;
+    position: relative;
     min-width: 360px;
 }
 
-img{
+/* для изображений */
+img {
     max-width: 100%;
 }
+
+/* свойства для контейнера, который включает всю страницу */
 .container {
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
@@ -51,6 +59,7 @@ img{
     overflow: hidden;
 }
 
+/* свойства для шапки страницы */
 .header {
     display: flex;
     align-items: center;
@@ -58,10 +67,9 @@ img{
     padding-left: 120px;
     padding-right: 120px;
     width: 100%;
-
-
 }
 
+/* логотип или же наша надпись Recipes */
 .header__logo {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -75,6 +83,7 @@ img{
     padding-right: 80px;
 }
 
+/* Навигационная панель */
 .header__navigation {
     display: flex;
     align-items: center;
@@ -83,6 +92,7 @@ img{
 
 }
 
+/* Список меню */
 .header__navigation-list {
     display: flex;
     justify-content: space-between;
@@ -90,6 +100,7 @@ img{
     height: 22px;
 }
 
+/* Компоненты списка меню */
 .header__navigation-item {
     font-style: normal;
     font-weight: normal;
@@ -100,17 +111,25 @@ img{
     width: 100%;
 }
 
+/* Ссылки которые содержатся в компонентах */
 .header__navigation-link {
     text-decoration: none;
     color: #9196A1;
     font-weight: 400;
 }
 
+/* Выбранный в данный момент элемент списка */
 .header__navigation-link--active {
     font-weight: 600;
     color: #3A3C41;
 }
 
+/* Эффект при наведении на элемент списка меню */
+.header__navigation-link:hover {
+    color: #3A3C41;
+}
+
+/* область авторизации */
 .header__login {
     display: flex;
     height: 38px;
@@ -120,6 +139,7 @@ img{
     justify-content: flex-end;
 }
 
+/* кнопка войти */
 .header__login-button {
     max-width: 60px;
     width: 100%;
@@ -136,14 +156,15 @@ img{
     outline: none
 }
 
+/* Первая секция основного контента на странице */
 .top-block {
     max-width: 1440px;
     height: 800px;
     padding-top: 0px;
     padding-left: 120px;
-
 }
 
+/* Заголовок первой секции */
 .top-block-container__title {
     font-family: 'Montserrat', sans-serif;
     font-size: 72px;
@@ -151,9 +172,9 @@ img{
     font-weight: 700;
     color: #25292D;
     text-align: left;
-
 }
 
+/* Описание под заголовком первой секции */
 .top-block-container__description {
     font-weight: 400;
     font-size: 19px;
@@ -162,15 +183,15 @@ img{
     padding-top: 15px;
     padding-bottom: 40px;
     text-align: left;
-
-
 }
 
+/* контейнер для того чтобы контролировать позицию кнопок относительно других элементов */
 .top-block-container__buttons {
     max-width: 500px;
     display: block;
 }
 
+/* тут свойства для кнопок в первой секции */
 .top-block-container__button {
     font-family: 'Montserrat', sans-serif;
     border-radius: 16px;
@@ -182,9 +203,17 @@ img{
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
-
+    cursor: pointer;
 }
 
+/* Эффект наведения на кнопку */
+.top-block-container__button:hover {
+    color: #FDB100;
+    background-color: #FFFFFF;
+    border: 1px solid #FDB100;
+}
+
+/* тут свойства для кнопки с модификатором */
 .top-block-container__button--login {
     max-width: 216px;
     float: right;
@@ -193,6 +222,13 @@ img{
     color: #FDB100;
 }
 
+/* Эффект наведения на кнопку с модификатором */
+.top-block-container__button--login:hover {
+    color: #FFFFFF;
+    background-color: #FDB100;
+}
+
+/* тут описал свойства чтобы получше расположить картинку */
 .top-block__image {
     display: block;
     float: right;
@@ -200,12 +236,105 @@ img{
     margin-top: -75px;
     margin-right: 0px;
     border-radius: 0px 0px 0px 200px;
-
 }
 
+/* этот контейнер создал чтобы позиционировать элементы в секции, может быть так не стоит делать... */
 .top-block-container {
     display: block;
     float: left;
     width: 50%;
     margin-top: 144px;
+}
+
+/* Вторая секция на странице */
+.sort {
+    display: inline-block;
+    max-width: 1200px;
+    width: 100%;
+    max-height: 460px;
+    height: 100%;
+    padding-top: 113px;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+/* Заголовок второй секции */
+.sort__title {
+    max-width: 811px;
+    width: 100%;
+    max-height: 62px;
+    height: 100%;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 62px;
+    color: #25292D;
+}
+
+/* Описание под заголовком секции */
+.sort__description {
+    max-width: 700px;
+    width: 100%;
+    max-height: 68px;
+    height: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    color: #4A525A;
+    line-height: 32px;
+    padding-top: 16px;
+}
+
+/* Список с карточками второй секции */
+.sort__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    max-height: 329px;
+    height: 100%;
+    padding-top: 42px;
+}
+
+/* Карточки */
+.sort__list-item {
+
+    max-width: 278px;
+    width: 100%;
+    max-height: 271px;
+    height: 100%;
+    background-color:#FFFFFF;
+    box-shadow: 0px 16px 72px rgba(34, 39, 47, 0.05);
+    border-radius: 24px;
+
+}
+/*  */
+.sort__list-item-link {
+    display: block;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #25292D;
+    text-decoration: none;
+    max-width: 207px;
+    width: 100%;
+    max-height: 30px;
+    height: 100%;
+    padding-left: 24px;
+    padding-top: 98px;
+
+}
+/*  */
+.sort__list-description {
+    display: block;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #4A525A;
+    max-width: 230px;
+    width: 100%;
+    max-height: 95px;
+    height: 100%;
+    padding-left: 24px;
+    padding-top: 16px;
+    padding-bottom: 32px;
 }
