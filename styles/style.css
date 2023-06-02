@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Montserrat";
-    src: url("/fonts/Montserrat-Bold.woff2") format("woff2"), ;
+    src: url("../fonts/Montserrat-Bold.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: "Montserrat";
-    src: url("/fonts/Montserrat-Medium.woff2") format("woff2"), ;
+    src: url("../fonts/Montserrat-Medium.woff2") format("woff2");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: "Montserrat";
-    src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), ;
+    src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: "Montserrat";
-    src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), ;
+    src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
     font-family: "Mulish";
-    src: url("../fonts/Mulish-Regular.woff2") format("woff2"), ;
+    src: url("../fonts/Mulish-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -40,9 +40,11 @@
 
 /* Глобальные свойства для контента */
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 400;
     position: relative;
     min-width: 360px;
+    overflow-x: hidden;
 }
 
 /* для изображений */
@@ -52,21 +54,29 @@ img {
 
 /* свойства для контейнера, который включает всю страницу */
 .container {
-    font-family: 'Montserrat', sans-serif;
+    max-width: 1440px;
     box-sizing: border-box;
-    height: 2719px;
-    background-color: #FEFEFB;
-    overflow: hidden;
+    width: 100%;
+    background-color: #fefefb;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 /* свойства для шапки страницы */
 .header {
+    position: fixed;
     display: flex;
     align-items: center;
-    padding-top: 40px;
-    padding-left: 120px;
-    padding-right: 120px;
     width: 100%;
+}   
+
+.header--background {
+    width: 100%;
+    max-height: 120px;
+    height: 100%;
+    background-color: #fefefb4b;
+
 }
 
 /* логотип или же наша надпись Recipes */
@@ -78,7 +88,7 @@ img {
     max-width: 200px;
     width: 100%;
     height: 35px;
-    color: #FDB100;
+    color: #fdb100;
     text-decoration: none;
     padding-right: 80px;
 }
@@ -88,7 +98,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 565px;
+    padding-right: 600px;
 
 }
 
@@ -106,7 +116,7 @@ img {
     font-weight: normal;
     font-size: 18px;
     line-height: 22px;
-    color: #9196A1;
+    color: #9196a1;
     list-style-type: none;
     width: 100%;
 }
@@ -114,19 +124,19 @@ img {
 /* Ссылки которые содержатся в компонентах */
 .header__navigation-link {
     text-decoration: none;
-    color: #9196A1;
+    color: #9196a1;
     font-weight: 400;
 }
 
 /* Выбранный в данный момент элемент списка */
 .header__navigation-link--active {
     font-weight: 600;
-    color: #3A3C41;
+    color: #3a3c41;
 }
 
 /* Эффект при наведении на элемент списка меню */
 .header__navigation-link:hover {
-    color: #3A3C41;
+    color: #3a3c41;
 }
 
 /* область авторизации */
@@ -136,7 +146,9 @@ img {
     max-width: 112px;
     width: 100%;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
+    font-weight: 600;
+    margin-left: 60px;
 }
 
 /* кнопка войти */
@@ -150,9 +162,9 @@ img {
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
-    color: #FDB100;
+    color: #fdb100;
     border: none;
-    background-color: #FEFEFB;
+    background-color: transparent;
     outline: none
 }
 
@@ -160,8 +172,12 @@ img {
 .top-block {
     max-width: 1440px;
     height: 800px;
-    padding-top: 0px;
-    padding-left: 120px;
+    padding-top: 80px;
+    background-image: url(../img/header_img.jpg);
+    background-repeat: no-repeat;
+    background-position: right 0px bottom 30px;
+
+
 }
 
 /* Заголовок первой секции */
@@ -170,7 +186,7 @@ img {
     font-size: 72px;
     line-height: 87.77px;
     font-weight: 700;
-    color: #25292D;
+    color: #25292d;
     text-align: left;
 }
 
@@ -179,7 +195,7 @@ img {
     font-weight: 400;
     font-size: 19px;
     line-height: 28px;
-    color: #4A525A;
+    color: #4a525a;
     padding-top: 15px;
     padding-bottom: 40px;
     text-align: left;
@@ -197,20 +213,21 @@ img {
     border-radius: 16px;
     height: 60px;
     width: 50%;
-    background-color: #FDB100;
+    background-color: #fdb100;
     border: none;
-    color: #FFFFFF;
+    color: #ffffff;
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
     cursor: pointer;
+    text-align: center;
 }
 
 /* Эффект наведения на кнопку */
 .top-block-container__button:hover {
-    color: #FDB100;
-    background-color: #FFFFFF;
-    border: 1px solid #FDB100;
+    color: #fdb100;
+    background-color: #ffffff;
+    border: 1px solid #fdb100;
 }
 
 /* тут свойства для кнопки с модификатором */
@@ -218,24 +235,15 @@ img {
     max-width: 216px;
     float: right;
     background-color: transparent;
-    border: 1px solid #FDB100;
-    color: #FDB100;
+    border: 1px solid #fdb100;
+    color: #fdb100;
+    text-align: center;
 }
 
 /* Эффект наведения на кнопку с модификатором */
 .top-block-container__button--login:hover {
-    color: #FFFFFF;
-    background-color: #FDB100;
-}
-
-/* тут описал свойства чтобы получше расположить картинку */
-.top-block__image {
-    display: block;
-    float: right;
-    width: 50%;
-    margin-top: -75px;
-    margin-right: 0px;
-    border-radius: 0px 0px 0px 200px;
+    color: #ffffff;
+    background-color: #fdb100;
 }
 
 /* этот контейнер создал чтобы позиционировать элементы в секции, может быть так не стоит делать... */
@@ -253,9 +261,8 @@ img {
     width: 100%;
     max-height: 460px;
     height: 100%;
-    padding-top: 113px;
-    padding-left: 120px;
-    padding-right: 120px;
+    margin-top: 113px;
+    margin-right:0px;
 }
 
 /* Заголовок второй секции */
@@ -267,7 +274,7 @@ img {
     font-weight: 700;
     font-size: 42px;
     line-height: 62px;
-    color: #25292D;
+    color: #25292d;
 }
 
 /* Описание под заголовком секции */
@@ -278,7 +285,7 @@ img {
     height: 100%;
     font-weight: 400;
     font-size: 18px;
-    color: #4A525A;
+    color: #4a525a;
     line-height: 32px;
     padding-top: 16px;
 }
@@ -286,55 +293,330 @@ img {
 /* Список с карточками второй секции */
 .sort__list {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
+    /* align-items: center;
+    justify-content: space-between; */
+    /* max-width: 1200px;
     width: 100%;
     max-height: 329px;
-    height: 100%;
+    height: 100%; */
     padding-top: 42px;
+    gap: 29px;
+    list-style: none;
 }
 
 /* Карточки */
 .sort__list-item {
-
     max-width: 278px;
     width: 100%;
     max-height: 271px;
     height: 100%;
-    background-color:#FFFFFF;
+    background-color: #ffffff;
     box-shadow: 0px 16px 72px rgba(34, 39, 47, 0.05);
     border-radius: 24px;
+    padding-left: 24px;
+    padding-top: 24px;
+    padding-bottom: 32px;
 
 }
-/*  */
+
+/* ссылка в карточке(кликабельная часть) */
 .sort__list-item-link {
-    display: block;
+    display: flex;
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
-    color: #25292D;
+    color: #25292d;
     text-decoration: none;
-    max-width: 207px;
     width: 100%;
     max-height: 30px;
     height: 100%;
-    padding-left: 24px;
-    padding-top: 98px;
-
+    padding-top: 80px;
 }
-/*  */
-.sort__list-description {
+/* Заголовок карточки */
+.sort__list-item-title{
+    padding-bottom: 50px;
+}
+
+/* Иконка  */
+.sort__list-item--book::before {
     display: block;
+    content: "";
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/book.png);
+    background-size: 50px 50px;
+    padding-bottom: 24px;
+     /* left: 50%; */
+    /* background-position: top 10px; */
+    
+}
+
+/* Иконка  */
+.sort__list-item--kid::before {
+    display: block;
+    content: "";
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/baby.png);
+    background-size: 50px 50px;
+    padding-bottom: 24px;    
+}
+
+/* Иконка  */
+.sort__list-item--chef::before {
+    display: block;
+    content: "";
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/chef.png);
+    background-size: 50px 50px;
+    padding-bottom: 24px;    
+}
+
+/* Иконка  */
+.sort__list-item--holiday::before {
+    display: block;
+    content: "";
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/celebration.png);
+    background-size: 50px 50px;
+    padding-bottom: 24px;  
+}
+
+/* Описание карточки */
+.sort__list-description {
+    display: flex;
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
-    color: #4A525A;
+    color: #4a525a;
     max-width: 230px;
     width: 100%;
     max-height: 95px;
     height: 100%;
-    padding-left: 24px;
+    padding-left: 0px;
+    padding-top: 40px;
+    margin-bottom: 30px;
+
+}
+/* Секция 3 */
+.recipe-of-day__author-img {
+    position: relative;
+    width: 100%;
+  }
+  
+  .recipe-of-day__author-link {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FDB100;
+    background-color: #FFFFFF;
+    padding: 4px 16px;
+    position: absolute;
+    top: 435px;
+    left: 0;
+  }
+  
+  .recipe-of-day {
+    display: flex;
+    gap: 73px;
+    padding-top: 157px;
+  }
+  
+  
+  /* .recipe-of-day__box-text::before {
+    content: url(../img/ic_recipe_of_day.svg);
+  } */
+  
+  .recipe-of-day__box-img {
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  
+  .recipe-of-day__box-img-count {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+  }
+  
+  .recipe-of-day__box-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 60px;
+    color: #25292D;
+    padding-top: 32px;
+  }
+  
+  .recipe-of-day__box-desc {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: #4A525A;
     padding-top: 16px;
-    padding-bottom: 32px;
+  }
+  
+  .recipe-of-day__box-fav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .recipe-of-day__box-fav-text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #25292D;
+    padding-left: 9px;
+  }
+  
+  /* .recipe-of-day__box-fav-text::before {
+    content: url(../img/ic_fav.svg);
+  } */
+  
+  .recipe-of-day__box-times {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+  }
+  .recipe-of-day__box-times-img {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .recipe-of-day__box-times-text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #25292D;
+    width: 78px;
+  
+  }
+
+.search {
+    padding-top: 150px;
+  }
+
+.search__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 51px;
+    text-align: center;
+    color: #25292D;
+  }
+.search__description {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    padding-top: 16px;
+  
+    text-align: center;
+    font-feature-settings: 'case' on;
+  
+    color: #4A525A;
+  }
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 64px;
+  }
+
+.search__box-input {
+    display: inline-flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 894px;
+    margin: 0 auto;
+  }
+
+.search__input {
+    height: 73px; 
+    width: 716px;
+    background: white;
+    border: none;
+    box-shadow: 0px 8px 42px rgba(34, 39, 47, 0.04);
+    border-radius: 16px;
+  
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color:  #808080;
+    padding-left: 32px;
+  }
+
+.search-container__button{
+    background-color: #FDB100;
+    color: #fff;
+    border: none; 
+    border-radius: 16px; 
+    min-height: 73px; 
+    min-width: 152px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.search__list {
+    display: flex;
+    gap: 10px;
+    padding-top: 24px;
+    padding-bottom: 106px;
+    width: 100%;
+}
+  
+.search__list-link {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #808080;
+}
+
+.footer {
+    background-color: #FBF9F4;
+    padding: 40px 0;
+}
+  
+.footer_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FBF9F4;
+}
+  
+.footer__logo {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: #FDB100;
+}
+  
+.footer__copyright {
+    font-family: 'Montserrat500';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #4A525A;
 }

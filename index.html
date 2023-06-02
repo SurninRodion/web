@@ -7,16 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
-
     <title>Рецепты</title>
 </head>
 
 <body>
     <div class="container">
-        <header class="header">
+        <header class="header header--background">
             <a class="header__logo" href="#">Recipes</a> <!--Тут не уверен, может просто делать ссылкой..-->
             <nav class="header__navigation">
                 <ul class="header__navigation-list">
@@ -40,7 +36,6 @@
 
         <main class="main">
             <section class="top-block">
-                <img class="top-block__image" src="./img/header_img.jpg" width="602px" height="800px" alt="jpg">
                 <div class="top-block-container"> <!--подумать над названием класса-->
                     <h1 class="top-block-container__title">Готовь и делись<br>рецептами</h1>
                     <p class="top-block-container__description">Никаких кулинарных книг и блокнотов! Храни все<br>
@@ -62,30 +57,30 @@
                 <p class="sort__description">Добавляйте рецепты и указывайте наиболее популярные теги. Это позволит быстро находить любые
                     категории</p>
                 <ul class="sort__list">
-                    <li class="sort__list-item">
+                    <li class="sort__list-item sort__list-item--book">
                         <a class="sort__list-item-link" href="#">
-                            <h3>Простые блюда</h3>
+                            <h3 class="sort__list-item-title">Простые блюда</h3>
                         </a>
                         <!--<img class="" src="#" alt="Простые блюда">-->
                         <p class="sort__list-description">Время приготвления таких блюд не более 1 часа</p>
                     </li>
-                    <li class="sort__list-item">
+                    <li class="sort__list-item sort__list-item--kid">
                         <a class="sort__list-item-link" href="#">
-                            <h3>Детское</h3>
+                            <h3 class="sort__list-item-title">Детское</h3>
                         </a>
                         <!--<img src="#" alt="Детское">-->
                         <p class="sort__list-description">Самые полезные блюда которые можно детям любого возраста</p>
                     </li>
-                    <li class="sort__list-item">
+                    <li class="sort__list-item sort__list-item--chef">
                         <a class="sort__list-item-link" href="#">
-                            <h3>От шеф-поваров</h3>
+                            <h3 class="sort__list-item-title">От шеф-поваров</h3>
                         </a>
                         <!--<img src="" alt="От шеф-поваров">-->
                         <p class="sort__list-description">Требуют умения, времени и терпения, зато как в ресторане</p>
                     </li>
-                    <li class="sort__list-item">
+                    <li class="sort__list-item sort__list-item--holiday">
                         <a class="sort__list-item-link" href="#">
-                            <h3>На праздник</h3>
+                            <h3 class="sort__list-item-title">На праздник</h3>
                         </a>
                         <!-- <img src="" alt="На праздник"> -->
                         <p class="sort__list-description">Чем удивить гостей, чтобы все были сыты за праздничным столом
@@ -94,30 +89,25 @@
                 </ul>
             </section>
 
-            <section class="day-decipe">
-                <div class="day-decipe-img"> <!--Картинка в левой части секции--><!--нужен ли тут класс??-->
-                    <img src="#" alt="jpg">
-                    <span class="day-decipe-img__item">@autor_tag</span>
+            <section class="recipe-of-day container">
+                <div class="recipe-of-day__author-img">
+                    <img class="recipe-of-day__author-img" src="./img/section3_img.jpg">
+                    <a class="recipe-of-day__author-link">@glazest</a>
                 </div>
-                <div class="day-decipe-container">
-                    <div class="day-decipe-container__counters">
-                        <div class="day-decipe-container__counters-likes">
-                            <!-- <img src="#" alt="likes">-->
-                            <span class="day-decipe-container__counters-item">356</span>
+                <div class="recipe-of-day__box">
+                    <div class="recipe-of-day__box-img-count">
+                        <div class="recipe-of-day__box-fav">
+                            <img class="recipe-of-day__box-fav-img" src="./img/hearth.svg">
+                            <p class="recipe-of-day__box-fav-text">356</p>
                         </div>
-                        <div class="day-decipe-container__counters-time">
-                            <!--<img src="#" alt="time">-->
-                            <span class="day-decipe-container__counters-item">35 минут</span>
-                        </div>
-                        <div class="day-decipe-container__smile">
-                            <!--<img src="#" alt="Рецепт дня">-->
+                        <div class="recipe-of-day__box-times">
+                            <img class="recipe-of-day__box-times-img" src="./img/ic_timer.svg">
+                            <p class="recipe-of-day__box-times-text">35 минут</p>
                         </div>
                     </div>
-                    <h2 class="day-decipe-container__title">Тыквенный супчик <br>На кокосовом молоке</h2>
-                    <p class="day-decipe-container__description">Если у вас осталась тыква, и вы не знаете что с ней
-                        <br> сделать, то это решение для вас! Ароматный,<br> согревающий суп-пюре на кокосовом молоке.
-                        Можно<br> даже в Пост!
-                    </p>
+                    <img class="recipe-of-day__box-img" src="./img/smile.png">
+                    <h2 class="recipe-of-day__box-title">Тыквенный супчик на кокосовом молоке</h2>
+                    <p class="recipe-of-day__box-desc">Если у вас осталась тыква, и вы не знаете что с ней сделать, то это решение для вас! Ароматный, согревающий суп-пюре на кокосовом молоке. Можно даже в Пост! </p>
                 </div>
             </section>
 
@@ -125,14 +115,16 @@
                 <h2 class="search__title">Поиск рецептов</h2>
                 <p class="search__description">Введите примерное название блюда, а мы по тегам найдем его</p>
                 <div class="search-container">
-                    <input type="text" placeholder="Название блюда...." name="search">
-                    <button class="search-container__button" name="Поиск" value="Поиск">Поиск</button>
-                    <ul>
-                        <li>Мясо</li>
-                        <li>Деликатесы</li>
-                        <li>Пироги</li>
-                        <li>Рыба</li>
-                    </ul>
+                    <form class="search__box-input">
+                        <input class="search__input" type="text" placeholder="Название блюда...." name="search">
+                        <button class="search-container__button" name="Поиск" value="Поиск">Поиск</button>
+                        <ul class="search__list">
+                            <li class="search__list-item"><a class="search__list-link">Мясо</a></li>
+                            <li class="search__list-item"><a class="search__list-link">Деликатесы</a></li>
+                            <li class="search__list-item"><a class="search__list-link">Пироги</a></li>
+                            <li class="search__list-item"><a class="search__list-link">Рыба</a></li>
+                        </ul>
+                    </form>
                 </div>
             </section>
             <!--окно при нажатии кнопки "добавить рецепт"-->
@@ -189,9 +181,9 @@
         </main>
 
         <footer class="footer">
-            <a class="footer__logo" href="#">Recipes</a>
-            <div class="footer__copiright-label">
-                <span>© Recipes 2023</span>
+            <div class="footer_wrapper container">
+                <p class="footer__logo">Recipes</p>
+                <p class="footer__copyright">© Recipes 2021</p>
             </div>
         </footer>
     </div>
