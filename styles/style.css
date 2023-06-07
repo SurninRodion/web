@@ -1,411 +1,359 @@
 @font-face {
-    font-family: "Montserrat";
-    src: url("../fonts/Montserrat-Bold.woff2") format("woff2");
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Bold.woff2) format('woff2');
     font-weight: 700;
-    font-style: normal;
     font-display: swap;
-}
-
-@font-face {
-    font-family: "Montserrat";
-    src: url("../fonts/Montserrat-Medium.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: 'Montserrat500';
+    src: url(../fonts/Montserrat-Medium.woff2) format('woff2');
     font-weight: 500;
-    font-style: normal;
     font-display: swap;
-}
-
-@font-face {
-    font-family: "Montserrat";
-    src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Regular.woff2) format('woff2');
     font-weight: 400;
-    font-style: normal;
     font-display: swap;
-}
-
-@font-face {
-    font-family: "Montserrat";
-    src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-SemiBold.woff2) format('woff2');
     font-weight: 600;
-    font-style: normal;
     font-display: swap;
-}
-
-@font-face {
-    font-family: "Mulish";
-    src: url("../fonts/Mulish-Regular.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: 'Mulish';
+    src: url(../fonts/Mulish-Regular-400.woff) format('woff');
     font-weight: 400;
-    font-style: normal;
     font-display: swap;
-}
-
-/* Глобальные свойства для контента */
-body {
-    font-family: "Montserrat", Arial, sans-serif;
-    font-weight: 400;
-    position: relative;
-    min-width: 360px;
-    overflow-x: hidden;
-}
-
-/* для изображений */
-img {
-    max-width: 100%;
-}
-
-/* свойства для контейнера, который включает всю страницу */
+  }
+  
 .container {
-    max-width: 1440px;
     box-sizing: border-box;
     width: 100%;
-    background-color: #fefefb;
-    margin-left: auto;
-    margin-right: auto;
-
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+.container-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    width: 100%;
+    padding: 15px;
+  
+    border: 1px solid #000000;
+    border-radius: 10px;
+  
+    background-color: #ffffff;
+  
+    transform: translate(-50%, -50%);
+  }
+  
+  @media (max-width: 1200px) {
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    }
+  }
+  
+@media (max-width: 330px) {
+    .container {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  }
+  
+.header-bg {
+    background-color: #fefefbe0;
 }
 
-/* свойства для шапки страницы */
 .header {
     position: fixed;
+    padding-top: 40px;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  
+  .header--bg {
+    background-color: #FEFEFB;
+  }
+  
+  .header__wrapper {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
     width: 100%;
-}   
-
-.header--background {
-    width: 100%;
-    max-height: 120px;
-    height: 100%;
-    background-color: #fefefb4b;
-
-}
-
-/* логотип или же наша надпись Recipes */
-.header__logo {
-    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .header__main {
+    display: flex;
+    gap: 80px;
+  }
+  
+  .header__logo {
+    font-family: 'Montserrat';
+    font-style: normal;
     font-weight: 700;
     font-size: 24px;
-    line-height: 29px;
-    max-width: 200px;
-    width: 100%;
-    height: 35px;
-    color: #fdb100;
-    text-decoration: none;
-    padding-right: 80px;
-}
-
-/* Навигационная панель */
-.header__navigation {
+    color: #FDB100;
+  }
+  
+  .header__navigation {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 600px;
-
-}
-
-/* Список меню */
-.header__navigation-list {
+  }
+  
+  .header__navigation-list {
     display: flex;
     justify-content: space-between;
-    width: 344px;
-    height: 22px;
-}
-
-/* Компоненты списка меню */
-.header__navigation-item {
+    gap: 40px;
+  }
+  
+  .header__navigation-item {
+    font-family: 'Montserrat';
     font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
-    color: #9196a1;
-    list-style-type: none;
-    width: 100%;
-}
-
-/* Ссылки которые содержатся в компонентах */
-.header__navigation-link {
-    text-decoration: none;
-    color: #9196a1;
     font-weight: 400;
-}
-
-/* Выбранный в данный момент элемент списка */
-.header__navigation-link--active {
-    font-weight: 600;
-    color: #3a3c41;
-}
-
-/* Эффект при наведении на элемент списка меню */
-.header__navigation-link:hover {
-    color: #3a3c41;
-}
-
-/* область авторизации */
-.header__login {
+    font-size: 18px;
+    line-height: 22px;
+    color: #9196A1;
+    list-style-type: none;
+  
+    width: 100%;
+  }
+  
+  .header__navigation-link {
+    text-decoration: none;
+    color: #9196A1;
+  }
+  
+  .header__navigation-link:hover {
+    color: #3A3C41;
+  }
+  
+  .header__login {
     display: flex;
-    height: 38px;
-    max-width: 112px;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: 600;
-    margin-left: 60px;
-}
-
-/* кнопка войти */
-.header__login-button {
-    max-width: 60px;
-    width: 100%;
-    height: 22px;
-    cursor: pointer;
-    z-index: 2;
+    gap: 14px;
+  }
+  
+  .header__login-button {
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
-    line-height: 22px;
-    color: #fdb100;
-    border: none;
-    background-color: transparent;
-    outline: none
-}
+    color: #FDB100;
+    align-self: center;
+  
+  }
+  
+  @media (max-width: 1200px) { 
+    .container {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 1025px) { 
+    .container {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 330px) { 
+    .header__wrapper {
+      display: block;
+    }
+    .header__main {
+      display: block;
+    }
+    .header__navigation-list {
+      display: block;
+    }
+  }
 
-/* Первая секция основного контента на странице */
-.top-block {
-    max-width: 1440px;
+  .top-block {
     height: 800px;
-    padding-top: 80px;
     background-image: url(../img/header_img.jpg);
     background-repeat: no-repeat;
-    background-position: right 0px bottom 30px;
-
-
-}
-
-/* Заголовок первой секции */
-.top-block-container__title {
-    font-family: 'Montserrat', sans-serif;
+    background-position: right top;
+    padding-top: 211px;
+  }
+  
+  .top-block__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;;
     font-size: 72px;
-    line-height: 87.77px;
-    font-weight: 700;
-    color: #25292d;
+    color: #25292D;
     text-align: left;
-}
-
-/* Описание под заголовком первой секции */
-.top-block-container__description {
+    width: 50%;
+  }
+  
+  .top-block__description {
+    font-family: 'Montserrat';
+    font-style: normal;
     font-weight: 400;
-    font-size: 19px;
-    line-height: 28px;
-    color: #4a525a;
+    font-size: 18px;
+    color: #4A525A;
     padding-top: 15px;
     padding-bottom: 40px;
     text-align: left;
-}
-
-/* контейнер для того чтобы контролировать позицию кнопок относительно других элементов */
-.top-block-container__buttons {
-    max-width: 500px;
-    display: block;
-}
-
-/* тут свойства для кнопок в первой секции */
-.top-block-container__button {
-    font-family: 'Montserrat', sans-serif;
-    border-radius: 16px;
-    height: 60px;
     width: 50%;
-    background-color: #fdb100;
-    border: none;
-    color: #ffffff;
-    font-weight: 400;
+    padding-top: 16px;
+  }
+  
+  .top-block__button {
+    display: flex;
+    gap: 24px;
+  }
+  
+  .top-block__button-add {
+    background-color: #FDB100;
+    color: #fff;
+    border: none; 
+    border-radius: 16px; 
+    min-height: 60px; 
+    min-width: 278px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
     font-size: 18px;
-    line-height: 28px;
-    cursor: pointer;
-    text-align: center;
-}
+  }
+  
+  .top-block__button-auth {
+    background-color: white;
+    color: #FDB100;
+    border: 1px solid #FDB100; 
+    border-radius: 16px; 
+    min-height: 60px; 
+    min-width: 216px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+  @media (max-width: 330px) {
+    .top-block__title {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 50px;
+      color: #25292D;
+      text-align: left;
+      width: 50%;
+    }
+    .top-block__button {
+      display: block;
+    }
+  }
 
-/* Эффект наведения на кнопку */
-.top-block-container__button:hover {
-    color: #fdb100;
-    background-color: #ffffff;
-    border: 1px solid #fdb100;
-}
-
-/* тут свойства для кнопки с модификатором */
-.top-block-container__button--login {
-    max-width: 216px;
-    float: right;
-    background-color: transparent;
-    border: 1px solid #fdb100;
-    color: #fdb100;
-    text-align: center;
-}
-
-/* Эффект наведения на кнопку с модификатором */
-.top-block-container__button--login:hover {
-    color: #ffffff;
-    background-color: #fdb100;
-}
-
-/* этот контейнер создал чтобы позиционировать элементы в секции, может быть так не стоит делать... */
-.top-block-container {
-    display: block;
-    float: left;
-    width: 50%;
-    margin-top: 144px;
-}
-
-/* Вторая секция на странице */
-.sort {
-    display: inline-block;
-    max-width: 1200px;
-    width: 100%;
-    max-height: 460px;
-    height: 100%;
-    margin-top: 113px;
-    margin-right:0px;
-}
-
-/* Заголовок второй секции */
-.sort__title {
-    max-width: 811px;
-    width: 100%;
-    max-height: 62px;
-    height: 100%;
+  .sort {
+    padding-top: 113px;
+  }
+  
+  .sort__title {
+    font-family: 'Montserrat';
+    font-style: normal;
     font-weight: 700;
     font-size: 42px;
-    line-height: 62px;
-    color: #25292d;
-}
-
-/* Описание под заголовком секции */
-.sort__description {
-    max-width: 700px;
-    width: 100%;
-    max-height: 68px;
-    height: 100%;
+    color: #25292D;
+  }
+  
+  .sort__description {
+    font-family: 'Montserrat';
+    font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    color: #4a525a;
     line-height: 32px;
+    color: #4A525A;
     padding-top: 16px;
-}
-
-/* Список с карточками второй секции */
-.sort__list {
+    width: 700px;
+  }
+  
+  .sort__list {
     display: flex;
-    /* align-items: center;
-    justify-content: space-between; */
-    /* max-width: 1200px;
-    width: 100%;
-    max-height: 329px;
-    height: 100%; */
+    /* align-items: center; */
+    /* justify-content: space-between; */
     padding-top: 42px;
-    gap: 29px;
     list-style: none;
-}
-
-/* Карточки */
-.sort__list-item {
+    gap: 29px;
+    /* flex-direction: column; */
+  }
+  
+  .sort__item {
     max-width: 278px;
     width: 100%;
-    max-height: 271px;
-    height: 100%;
-    background-color: #ffffff;
+    /* min-height: 271px; */
+    background-color: white;
     box-shadow: 0px 16px 72px rgba(34, 39, 47, 0.05);
     border-radius: 24px;
-    padding-left: 24px;
-    padding-top: 24px;
+    padding: 24px;
     padding-bottom: 32px;
-
-}
-
-/* ссылка в карточке(кликабельная часть) */
-.sort__list-item-link {
-    display: flex;
+    /* margin-right: 29px; */
+  }
+  
+  .sort__item-img {
+    padding-bottom: 24px;
+  }
+  
+  .sort__item-title {
+    font-family: 'Montserrat';
+    font-style: normal;
     font-weight: 700;
     font-size: 24px;
-    line-height: 30px;
-    color: #25292d;
-    text-decoration: none;
-    width: 100%;
-    max-height: 30px;
-    height: 100%;
-    padding-top: 80px;
-}
-/* Заголовок карточки */
-.sort__list-item-title{
-    padding-bottom: 50px;
-}
-
-/* Иконка  */
-.sort__list-item--book::before {
-    display: block;
-    content: "";
-    position:absolute;
-    width: 50px;
-    height: 50px;
-    background-image: url(../img/book.png);
-    background-size: 50px 50px;
-    padding-bottom: 24px;
-     /* left: 50%; */
-    /* background-position: top 10px; */
-    
-}
-
-/* Иконка  */
-.sort__list-item--kid::before {
-    display: block;
-    content: "";
-    position:absolute;
-    width: 50px;
-    height: 50px;
-    background-image: url(../img/baby.png);
-    background-size: 50px 50px;
-    padding-bottom: 24px;    
-}
-
-/* Иконка  */
-.sort__list-item--chef::before {
-    display: block;
-    content: "";
-    position:absolute;
-    width: 50px;
-    height: 50px;
-    background-image: url(../img/chef.png);
-    background-size: 50px 50px;
-    padding-bottom: 24px;    
-}
-
-/* Иконка  */
-.sort__list-item--holiday::before {
-    display: block;
-    content: "";
-    position:absolute;
-    width: 50px;
-    height: 50px;
-    background-image: url(../img/celebration.png);
-    background-size: 50px 50px;
-    padding-bottom: 24px;  
-}
-
-/* Описание карточки */
-.sort__list-description {
-    display: flex;
+    color: #25292D;
+    padding-bottom: 16px;
+  }
+  
+  .sort__item-description {
+    font-family: 'Montserrat';
+    font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 30px;
-    color: #4a525a;
+    color: #4A525A;
     max-width: 230px;
-    width: 100%;
-    max-height: 95px;
-    height: 100%;
-    padding-left: 0px;
-    padding-top: 40px;
-    margin-bottom: 30px;
-
-}
-/* Секция 3 */
-.recipe-of-day__author-img {
+    line-height: 30px;
+  }
+  
+  @media (max-width: 330px) {
+    .sort__description {
+      width: 300px;
+    }
+  
+    .sort__list {
+      display: block;
+    }
+  }
+  
+  .recipe-of-day__author-img {
     position: relative;
     width: 100%;
   }
@@ -430,23 +378,21 @@ img {
   }
   
   
-  /* .recipe-of-day__box-text::before {
-    content: url(../img/ic_recipe_of_day.svg);
-  } */
+
   
-  .recipe-of-day__box-img {
+  .recipe-of-day__container-img {
     display: flex;
     justify-content: space-between;
   
   }
   
-  .recipe-of-day__box-img-count {
+  .recipe-of-day__container-img-count {
     display: flex;
     gap: 30px;
     justify-content: flex-end;
   }
   
-  .recipe-of-day__box-title {
+  .recipe-of-day__container-title {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
@@ -456,7 +402,7 @@ img {
     padding-top: 32px;
   }
   
-  .recipe-of-day__box-desc {
+  .recipe-of-day__container-description {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -466,12 +412,12 @@ img {
     padding-top: 16px;
   }
   
-  .recipe-of-day__box-fav {
+  .recipe-of-day__container-fav {
     display: flex;
     align-items: center;
   }
   
-  .recipe-of-day__box-fav-text {
+  .recipe-of-day__container-fav-text {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -480,21 +426,21 @@ img {
     padding-left: 9px;
   }
   
-  /* .recipe-of-day__box-fav-text::before {
+  /* .recipe-of-day__container-fav-text::before {
     content: url(../img/ic_fav.svg);
   } */
   
-  .recipe-of-day__box-times {
+  .recipe-of-day__container-times {
     display: flex;
     gap: 9px;
     align-items: center;
   }
-  .recipe-of-day__box-times-img {
+  .recipe-of-day__container-times-img {
     width: 28px;
     height: 28px;
   }
   
-  .recipe-of-day__box-times-text {
+  .recipe-of-day__container-times-text {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -503,21 +449,68 @@ img {
     width: 78px;
   
   }
-
-.search {
-    padding-top: 150px;
+  
+  .button_fav {
+    background-color: transparent;
+    border: none;
+  }
+  
+  .isLike .recipe-of-day__container-fav-img {
+    fill: red
+  }
+  
+  /* .recipe-of-day__container-times-text::before {
+    content: url(../img/ic_timer.svg);
+  } */
+  
+  @media (max-width: 1024px) { 
+    .recipe-of-day {
+      gap: 30px;
+      padding-top: 157px;
+    }
+    .recipe-of-day__container-title {
+      font-size: 30px;
+      line-height: 40px;
+      padding-top: 10px;
+    }
+    .recipe-of-day__author-link {
+      top: 360px;
+    }
+    .recipe-of-day__container {
+      max-width: 350px;
+    }
+  }
+  
+  @media (max-width: 330px) {
+    .recipe-of-day {
+      display: block;
+    }
+  
+    .recipe-of-day__author-link {
+      top: 260px;
+    }
+  
+    .recipe-of-day__container {
+      padding-top: 20px;
+    }
   }
 
-.search__title {
+  .search {
+    padding-top: 150px;
+  }
+  
+  .search__title {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 42px;
     line-height: 51px;
     text-align: center;
+    
     color: #25292D;
   }
-.search__description {
+  
+  .search__description {
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 400;
@@ -530,15 +523,15 @@ img {
   
     color: #4A525A;
   }
-
-.search-container {
+  
+  .search__container {
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding-top: 64px;
   }
-
-.search__box-input {
+  
+  .search__container-input {
     display: inline-flex;
     gap: 16px;
     justify-content: center;
@@ -546,8 +539,8 @@ img {
     max-width: 894px;
     margin: 0 auto;
   }
-
-.search__input {
+  
+  .search__input {
     height: 73px; 
     width: 716px;
     background: white;
@@ -562,8 +555,9 @@ img {
     color:  #808080;
     padding-left: 32px;
   }
-
-.search-container__button{
+  
+  .search__button {
+    /* position: absolute; */
     background-color: #FDB100;
     color: #fff;
     border: none; 
@@ -574,49 +568,65 @@ img {
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
-}
-
-.search__list {
+  }
+  
+  .search__list {
     display: flex;
     gap: 10px;
     padding-top: 24px;
     padding-bottom: 106px;
     width: 100%;
-}
+  }
   
-.search__list-link {
+  .search__list-link {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     color: #808080;
-}
+  }
+  
+  @media (max-width: 1024px) { 
+    .search__input {
+      width: 500px;
+    }
+  }
+  
+  @media (max-width: 330px) {
+    .search__input {
+      width: 200px;
+    }
+    
+    .search__button {
+      min-width: 100px;
+    }
+  }
 
-.footer {
+  .footer {
     background-color: #FBF9F4;
     padding: 40px 0;
-}
+  }
   
-.footer_wrapper {
+  .footer_wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #FBF9F4;
-}
+  }
   
-.footer__logo {
+  .footer__logo {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 39px;
     color: #FDB100;
-}
+  }
   
-.footer__copyright {
+  .footer__copyright {
     font-family: 'Montserrat500';
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     color: #4A525A;
-}
+  }
+  
