@@ -33,13 +33,14 @@
     font-display: swap;
   }
   
+  /* свойства для контейнера, который включает всю страницу */
 .container {
     box-sizing: border-box;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
   }
-  
+  /* свойства для контейнера форм */
 .container-form {
     position: absolute;
     top: 50%;
@@ -90,6 +91,7 @@
     background-color: #fefefbe0;
 }
 
+/* свойства для шапки страницы */
 .header {
     position: fixed;
     padding-top: 40px;
@@ -98,9 +100,13 @@
   }
   
   .header--bg {
-    background-color: #FEFEFB;
+    background-color:#fefefb4b;
+    width: 100%;
+    max-height: 120px;
+    height: 100%;
   }
   
+  /* обёртка шапки страницы */
   .header__wrapper {
     display: flex;
     justify-content: space-between;
@@ -112,26 +118,31 @@
     gap: 80px;
   }
   
+  /* логотип или же наша надпись Recipes */
   .header__logo {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     color: #FDB100;
+    text-decoration: none;
   }
   
+  /* Навигационная панель */
   .header__navigation {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   
+  /* Список меню */
   .header__navigation-list {
     display: flex;
     justify-content: space-between;
     gap: 40px;
   }
   
+  /* Компоненты списка меню */
   .header__navigation-item {
     font-family: 'Montserrat';
     font-style: normal;
@@ -140,24 +151,28 @@
     line-height: 22px;
     color: #9196A1;
     list-style-type: none;
-  
     width: 100%;
   }
   
+  /* Ссылки которые содержатся в компонентах */
   .header__navigation-link {
     text-decoration: none;
     color: #9196A1;
   }
   
+/* Эффект при наведении на элемент списка меню */
   .header__navigation-link:hover {
     color: #3A3C41;
   }
   
+
+  /* область авторизации */
   .header__login {
     display: flex;
     gap: 14px;
   }
   
+  /* кнопка войти */
   .header__login-button {
     font-family: 'Montserrat';
     font-style: normal;
@@ -165,6 +180,7 @@
     font-size: 18px;
     color: #FDB100;
     align-self: center;
+    text-decoration: none;
   
   }
   
@@ -198,6 +214,7 @@
     }
   }
 
+  /* Первая секция основного контента на странице */
   .top-block {
     height: 800px;
     background-image: url(../img/header_img.jpg);
@@ -206,6 +223,7 @@
     padding-top: 211px;
   }
   
+  /* Заголовок первой секции */
   .top-block__title {
     font-family: 'Montserrat';
     font-style: normal;
@@ -216,6 +234,7 @@
     width: 50%;
   }
   
+  /* Описание под заголовком первой секции */
   .top-block__description {
     font-family: 'Montserrat';
     font-style: normal;
@@ -229,12 +248,14 @@
     padding-top: 16px;
   }
   
-  .top-block__button {
+  /* контейнер для того чтобы контролировать позицию кнопок относительно других элементов */
+  .top-block__button-container {
     display: flex;
     gap: 24px;
   }
   
-  .top-block__button-add {
+  /* тут свойства для кнопок в первой секции */
+  .top-block__button {
     background-color: #FDB100;
     color: #fff;
     border: none; 
@@ -245,10 +266,19 @@
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
+    cursor: pointer;
   }
+
+  /* Эффект наведения на кнопку */
+  .top-block__button:hover {
+    color: #fdb100;
+    background-color: #ffffff;
+    border: 1px solid #fdb100;
+}
   
-  .top-block__button-auth {
-    background-color: white;
+/* тут свойства для кнопки с модификатором */
+  .top-block__button--other {
+    background-color:transparent;
     color: #FDB100;
     border: 1px solid #FDB100; 
     border-radius: 16px; 
@@ -258,7 +288,14 @@
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
+    cursor: pointer;
   }
+
+  /* Эффект наведения на кнопку с модификатором */
+  .top-block__button--other:hover {
+    color: #ffffff;
+    background-color: #fdb100;
+}
   
   @media (max-width: 330px) {
     .top-block__title {
@@ -275,10 +312,12 @@
     }
   }
 
+  /* Вторая секция на странице */
   .sort {
     padding-top: 113px;
   }
   
+  /* Заголовок второй секции */
   .sort__title {
     font-family: 'Montserrat';
     font-style: normal;
@@ -287,6 +326,7 @@
     color: #25292D;
   }
   
+  /* Описание под заголовком секции */
   .sort__description {
     font-family: 'Montserrat';
     font-style: normal;
@@ -298,32 +338,31 @@
     width: 700px;
   }
   
+  /* Список с карточками второй секции */
   .sort__list {
     display: flex;
-    /* align-items: center; */
-    /* justify-content: space-between; */
     padding-top: 42px;
     list-style: none;
     gap: 29px;
-    /* flex-direction: column; */
   }
   
+  /* Карточки */
   .sort__item {
     max-width: 278px;
     width: 100%;
-    /* min-height: 271px; */
     background-color: white;
     box-shadow: 0px 16px 72px rgba(34, 39, 47, 0.05);
     border-radius: 24px;
     padding: 24px;
     padding-bottom: 32px;
-    /* margin-right: 29px; */
   }
   
+  /* Иконка  */
   .sort__item-img {
     padding-bottom: 24px;
   }
   
+  /* Заголовок карточки */
   .sort__item-title {
     font-family: 'Montserrat';
     font-style: normal;
@@ -333,6 +372,7 @@
     padding-bottom: 16px;
   }
   
+  /* Описание карточки */
   .sort__item-description {
     font-family: 'Montserrat';
     font-style: normal;
@@ -353,11 +393,20 @@
     }
   }
   
+    /* Секция 3 */
+    .recipe-of-day {
+      display: flex;
+      gap: 73px;
+      padding-top: 157px;
+    }
+
+  /*  картинка в секции 3 */
   .recipe-of-day__author-img {
     position: relative;
     width: 100%;
   }
   
+  /* тэг на картинке */
   .recipe-of-day__author-link {
     font-family: 'Montserrat';
     font-style: normal;
@@ -371,27 +420,22 @@
     left: 0;
   }
   
-  .recipe-of-day {
-    display: flex;
-    gap: 73px;
-    padding-top: 157px;
-  }
-  
-  
 
-  
+  /* Контейнер для иконок сердечка и таймера */
   .recipe-of-day__container-img {
     display: flex;
     justify-content: space-between;
   
   }
   
+  /* иконка таймера */
   .recipe-of-day__container-img-count {
     display: flex;
     gap: 30px;
     justify-content: flex-end;
   }
   
+  /* Заголовок в 3 секции */
   .recipe-of-day__container-title {
     font-family: 'Montserrat';
     font-style: normal;
@@ -402,6 +446,7 @@
     padding-top: 32px;
   }
   
+  /* Описание в 3 секции */
   .recipe-of-day__container-description {
     font-family: 'Montserrat';
     font-style: normal;
@@ -412,11 +457,13 @@
     padding-top: 16px;
   }
   
+  /* иконка сердечка */
   .recipe-of-day__container-fav {
     display: flex;
     align-items: center;
   }
   
+  /* текст у иконки сердечка */
   .recipe-of-day__container-fav-text {
     font-family: 'Montserrat';
     font-style: normal;
@@ -426,20 +473,20 @@
     padding-left: 9px;
   }
   
-  /* .recipe-of-day__container-fav-text::before {
-    content: url(../img/ic_fav.svg);
-  } */
-  
+  /* контейнер для  иконки таймера и надписи */
   .recipe-of-day__container-times {
     display: flex;
     gap: 9px;
     align-items: center;
   }
+
+  /* Сама иконка таймера */
   .recipe-of-day__container-times-img {
     width: 28px;
     height: 28px;
   }
   
+  /* Текст у иконки таймера */
   .recipe-of-day__container-times-text {
     font-family: 'Montserrat';
     font-style: normal;
@@ -449,19 +496,6 @@
     width: 78px;
   
   }
-  
-  .button_fav {
-    background-color: transparent;
-    border: none;
-  }
-  
-  .isLike .recipe-of-day__container-fav-img {
-    fill: red
-  }
-  
-  /* .recipe-of-day__container-times-text::before {
-    content: url(../img/ic_timer.svg);
-  } */
   
   @media (max-width: 1024px) { 
     .recipe-of-day {
@@ -495,10 +529,12 @@
     }
   }
 
+  /* Секция 4 */
   .search {
     padding-top: 150px;
   }
   
+   /* Секция 4. Заголовок */
   .search__title {
     font-family: 'Montserrat';
     font-style: normal;
@@ -510,6 +546,7 @@
     color: #25292D;
   }
   
+   /* Секция 4. Описание */
   .search__description {
     font-family: 'Mulish';
     font-style: normal;
@@ -517,13 +554,12 @@
     font-size: 18px;
     line-height: 32px;
     padding-top: 16px;
-  
     text-align: center;
     font-feature-settings: 'case' on;
-  
     color: #4A525A;
   }
   
+   /* Секция 4. Контейнер для элементов секции */
   .search__container {
     display: flex;
     justify-content: center;
@@ -531,6 +567,7 @@
     padding-top: 64px;
   }
   
+   /* Секция 4. Форма поиска */
   .search__container-input {
     display: inline-flex;
     gap: 16px;
@@ -540,6 +577,7 @@
     margin: 0 auto;
   }
   
+   /* Секция 4. Поле для ввода текста в форме */
   .search__input {
     height: 73px; 
     width: 716px;
@@ -556,8 +594,8 @@
     padding-left: 32px;
   }
   
+   /* Секция 4. Кнопка поиск */
   .search__button {
-    /* position: absolute; */
     background-color: #FDB100;
     color: #fff;
     border: none; 
@@ -570,6 +608,7 @@
     font-size: 18px;
   }
   
+   /* Секция 4. Список элементов под строкой поиска */
   .search__list {
     display: flex;
     gap: 10px;
@@ -578,6 +617,7 @@
     width: 100%;
   }
   
+   /* Секция 4. Ссылки на эти элементы */
   .search__list-link {
     font-family: 'Montserrat';
     font-style: normal;
@@ -602,17 +642,20 @@
     }
   }
 
+   /* Подвал сайта */
   .footer {
     background-color: #FBF9F4;
     padding: 40px 0;
   }
   
+    /* Обёртка подвала или же контейнер */
   .footer_wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   
+   /* Логотип подвала */
   .footer__logo {
     font-family: 'Montserrat';
     font-style: normal;
@@ -622,6 +665,7 @@
     color: #FDB100;
   }
   
+   /* копирайтинг */
   .footer__copyright {
     font-family: 'Montserrat500';
     font-style: normal;
