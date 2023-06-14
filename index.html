@@ -1,212 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Site</title>
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/style.css" />
-  </head>
-  <body>
-    <header class="header header--bg">
-      <div class="header__wrapper container">
-        <div class="header__main">
-          <a class="header__logo" href="#">Recipes</a>
-          <nav class="header__navigation">
-            <ul class="header__navigation-list">
-              <li class="header__navigation-item">
-                <a class="header__navigation-link" href="#">Главная</a>
-              </li>
-              <li class="header__navigation-item">
-                <a class="header__navigation-link" href="#">Рецепты</a>
-              </li>
-              <li class="header__navigation-item">
-                <a class="header__navigation-link" href="#">Избранное</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="header__login">
-          <img class="recipe-of-day__container-img" src="./img/login.svg" />
-          <a class="header__login-button" href="#">Войти</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Рецепты</title>
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/forms.css" />
+  <script src="scripts/scripts.js"></script>
+</head>
+
+<body>
+  <header class="header header--bg">
+    <div class="header__wrapper container">
+      <div class="header__main">
+        <a class="header__logo" href="#">Recipes</a>
+        <nav class="header__navigation">
+          <ul class="header__navigation-list">
+            <li class="header__navigation-item">
+              <a class="header__navigation-link" href="#">Главная</a>
+            </li>
+            <li class="header__navigation-item">
+              <a class="header__navigation-link" href="#">Рецепты</a>
+            </li>
+            <li class="header__navigation-item">
+              <a class="header__navigation-link" href="#">Избранное</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__login">
+        <img class="recipe-of-day__container-img" src="./img/login.svg" />
+        <button class="header__login-button" id="header__login_button" href="#">Войти</button>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="top-block">
+      <div class="top-block__wrapper container">
+        <h2 class="top-block__title">Готовь и делись рецептами</h2>
+        <p class="top-block__description">
+          Никаких кулинарных книг и блокнотов! Храни все любимые рецепты в
+          одном месте.
+        </p>
+        <div class="top-block__button-container">
+          <button class="top-block__button" id="add_button">+ Добавить рецепт</button>
+          <button class="top-block__button--other" id="topBlock_loginButton">Войти</button>
         </div>
       </div>
-    </header>
-    <main class="main">
-      <section class="top-block">
-        <div class="top-block__wrapper container">
-          <h2 class="top-block__title">Готовь и делись рецептами</h2>
-          <p class="top-block__description">
-            Никаких кулинарных книг и блокнотов! Храни все любимые рецепты в
-            одном месте.
+    </section>
+    <section class="sort container">
+      <h2 class="sort__title">Умная сортировка по тегам</h2>
+      <p class="sort__description">
+        Добавляй рецепты и указывай наиболее популярные теги. Это позволит
+        быстро находить любые категории.
+      </p>
+      <ul class="sort__list">
+        <li class="sort__item">
+          <img class="sort__item-img" src="./img/book.png" />
+          <h3 class="sort__item-title">Простые блюда</h3>
+          <p class="sort__item-description">
+            Время приготвления таких блюд не более 1 часа
           </p>
-          <div class="top-block__button-container">
-            <button class="top-block__button">+ Добавить рецепт</button>
-            <button class="top-block__button--other">Войти</button>
-          </div>
-        </div>
-      </section>
-      <section class="sort container">
-        <h2 class="sort__title">Умная сортировка по тегам</h2>
-        <p class="sort__description">
-          Добавляй рецепты и указывай наиболее популярные теги. Это позволит
-          быстро находить любые категории.
-        </p>
-        <ul class="sort__list">
-          <li class="sort__item">
-            <img class="sort__item-img" src="./img/book.png" />
-            <h3 class="sort__item-title">Простые блюда</h3>
-            <p class="sort__item-description">
-              Время приготвления таких блюд не более 1 часа
-            </p>
-          </li>
-          <li class="sort__item">
-            <img class="sort__item-img" src="./img/baby.png" />
-            <h3 class="sort__item-title">Детское</h3>
-            <p class="sort__item-description">
-              Самые полезные блюда которые можно детям любого возраста
-            </p>
-          </li>
-          <li class="sort__item">
-            <img class="sort__item-img" src="./img/chef.png" />
-            <h3 class="sort__item-title">От шеф-поваров</h3>
-            <p class="sort__item-description">
-              Требуют умения, времени и терпения, зато как в ресторане
-            </p>
-          </li>
-          <li class="sort__item">
-            <img class="sort__item-img" src="./img/celebration.png" />
-            <h3 class="sort__item-title">На праздник</h3>
-            <p class="sort__item-description">
-              Чем удивить гостей, чтобы все были сыты за праздничным столом
-            </p>
-          </li>
-        </ul>
-      </section>
-      <section class="recipe-of-day container">
-        <div class="recipe-of-day__author-img">
-          <img
-            class="recipe-of-day__author-img"
-            src="./img/section3_img.jpg"
-          />
-          <a class="recipe-of-day__author-link">@glazest</a>
-        </div>
-        <div class="recipe-of-day__container">
-          <div class="recipe-of-day__container-img-count">
-            <div class="recipe-of-day__container-fav">
-                <img class="recipe-of-day__container-fav-img" src="./img/hearth.svg">
-                <p class="recipe-of-day__container-fav-text">356</p>
-            </div>
-            <div class="recipe-of-day__container-times">
-              <img
-                class="recipe-of-day__container-times-img"
-                src="img/ic_timer.svg"
-              />
-              <p class="recipe-of-day__container-times-text">35 минут</p>
-            </div>
-          </div>
-          <img class="recipe-of-day__container-img" src="./img/smile.png" />
-          <h2 class="recipe-of-day__container-title">
-            Тыквенный супчик на кокосовом молоке
-          </h2>
-          <p class="recipe-of-day__container-description">
-            Если у вас осталась тыква, и вы не знаете что с ней сделать, то это
-            решение для вас! Ароматный, согревающий суп-пюре на кокосовом
-            молоке. Можно даже в Пост!
+        </li>
+        <li class="sort__item">
+          <img class="sort__item-img" src="./img/baby.png" />
+          <h3 class="sort__item-title">Детское</h3>
+          <p class="sort__item-description">
+            Самые полезные блюда которые можно детям любого возраста
           </p>
-        </div>
-      </section>
-      <section class="search container">
-        <h2 class="search__title">Поиск рецептов</h2>
-        <p class="search__description">
-          Введите примерное название блюда, а мы по тегам найдем его
-        </p>
-        <div class="search__container">
-          <form class="search__container-input">
-            <input class="search__input" type="text" placeholder="Название блюда...." name="search">
-            <button class="search__button">Поиск</button>
-            <ul class="search__list">
-              <li class="search__list-item">
-                <a class="search__list-link">Мясо</a>
-              </li>
-              <li class="search__list-item">
-                <a class="search__list-link">Деликатесы</a>
-              </li>
-              <li class="search__list-item">
-                <a class="search__list-link">Пироги</a>
-              </li>
-              <li class="search__list-item">
-                <a class="search__list-link">Рыба</a>
-              </li>
-            </ul>
-          </form>
-        </div>
-      </section>
-      <!-- <div class="modal hide">
-        <form class="top-block-dialog container-form hide" action="">
-          <button class="top-block-dialog__button_exit" href="#">
-            <img src="./img/ic_close.svg" />
-          </button>
-          <h2 class="top-block-dialog__title">Войдите в профиль</h2>
-          <p class="top-block-dialog__description">
-            Добавлять рецепты могут только зарегистрированные пользователи.
+        </li>
+        <li class="sort__item">
+          <img class="sort__item-img" src="./img/chef.png" />
+          <h3 class="sort__item-title">От шеф-поваров</h3>
+          <p class="sort__item-description">
+            Требуют умения, времени и терпения, зато как в ресторане
           </p>
-          <div class="top-block-dialog__button">
-            <button
-              class="top-block-dialog__button-login"
-              type="login"
-              name="authorization__form-button-login"
-            >
-              Войти
-            </button>
-            <button
-              class="top-block-dialog__button-registration"
-              type="sign up"
-              name="authorization__form-button-signup"
-            >
-              Регистрация
-            </button>
-          </div>
-        </form>
-        <form class="registration container-form hide" action="">
-          <button class="registration__button_exit" href="#">
-              <img src="./img/ic_close.svg" />
-            </button>
-          <h2 class="registration__title">Регистрация</h2>
-          <input class="registration__input-name" type="text" placeholder="Имя" />
-          <input class="registration__input-login" type="text" placeholder="Логин" />
-          <div class="registration__input">
-            <input class="registration__input-password" type="password" name="" id="" placeholder="Пароль" />
-            <input class="registration__input-repeat-password"  type="password" name="" id="" placeholder="Повторите пароль" />
-          </div>
-          <p class="registration__password-description">Минимум 8 символов</p>
-          <div class="registration__button">
-            <button class="registration__button-reg">Зарегистрироваться</button>
-            <button class="registration__button-cancel">Отмена</button>
-          </div>
-          <p class="registration__link">У меня уже есть аккаунт</a>
-        </form>
-        <form class="login container-form hide" action="" >
-          <button class="login__button_exit" href="#">
-              <img src="./img/ic_close.svg" />
-            </button>
-          <h2 class="login__title">Войти</h2>
-          <input class="login__input-login" type="text" placeholder="Логин" />
-          <input class="login__input-password" type="password" name="" id="" placeholder="Пароль" />
-          <div class="login__button">
-            <button class="login__button-login">Войти</button>
-            <button class="login__button-cancel">Отмена</button>
-          </div>
-          <p class="login__link">У меня уже есть аккаунт</a>
-        </form>
-      </div> -->
-    </main>
-    <footer class="footer">
-      <div class="footer_wrapper container">
-        <p class="footer__logo">Recipes</p>
-        <p class="footer__copyright">© Recipes 2023</p>
+        </li>
+        <li class="sort__item">
+          <img class="sort__item-img" src="./img/celebration.png" />
+          <h3 class="sort__item-title">На праздник</h3>
+          <p class="sort__item-description">
+            Чем удивить гостей, чтобы все были сыты за праздничным столом
+          </p>
+        </li>
+      </ul>
+    </section>
+    <section class="recipe-of-day container">
+      <div class="recipe-of-day__author-img">
+        <img class="recipe-of-day__author-img" src="./img/section3_img.jpg" />
+        <a class="recipe-of-day__author-link">@glazest</a>
       </div>
-    </footer>
-  </body>
+      <div class="recipe-of-day__container">
+        <div class="recipe-of-day__container-img-count">
+          <div class="recipe-of-day__container-fav">
+            <button class="button_fav" type="button">
+              <svg class="recipe-of-day__container-fav-img" width="24" height="24" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.5" clip-path="url(#clip0_207_40)">
+                  <path
+                    d="M16.5 3C14.76 3 13.09 3.81 12 5.09C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.42 2 8.5C2 12.28 5.4 15.36 10.55 20.04L12 21.35L13.45 20.03C18.6 15.36 22 12.28 22 8.5C22 5.42 19.58 3 16.5 3ZM12.1 18.55L12 18.65L11.9 18.55C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5C9.04 5 10.54 5.99 11.07 7.36H12.94C13.46 5.99 14.96 5 16.5 5C18.5 5 20 6.5 20 8.5C20 11.39 16.86 14.24 12.1 18.55Z" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_207_40">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+            <p id="heart-count" class="recipe-of-day__container-fav-text">356</p>
+          </div>
+          <div class="recipe-of-day__container-times">
+            <img class="recipe-of-day__container-times-img" src="img/ic_timer.svg" />
+            <p class="recipe-of-day__container-times-text">35 минут</p>
+          </div>
+        </div>
+        <img class="recipe-of-day__container-img" src="./img/smile.png" />
+        <h2 class="recipe-of-day__container-title">
+          Тыквенный супчик на кокосовом молоке
+        </h2>
+        <p class="recipe-of-day__container-description">
+          Если у вас осталась тыква, и вы не знаете что с ней сделать, то это
+          решение для вас! Ароматный, согревающий суп-пюре на кокосовом
+          молоке. Можно даже в Пост!
+        </p>
+      </div>
+    </section>
+    <section class="search container">
+      <h2 class="search__title">Поиск рецептов</h2>
+      <p class="search__description">
+        Введите примерное название блюда, а мы по тегам найдем его
+      </p>
+      <div class="search__container">
+        <form class="search__container-input">
+          <input class="search__input" type="text" placeholder="Название блюда...." name="search">
+          <button class="search__button">Поиск</button>
+          <ul class="search__list">
+            <li class="search__list-item">
+              <a class="search__list-link">Мясо</a>
+            </li>
+            <li class="search__list-item">
+              <a class="search__list-link">Деликатесы</a>
+            </li>
+            <li class="search__list-item">
+              <a class="search__list-link">Пироги</a>
+            </li>
+            <li class="search__list-item">
+              <a class="search__list-link">Рыба</a>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer">
+    <div class="footer_wrapper container">
+      <p class="footer__logo">Recipes</p>
+      <p class="footer__copyright">© Recipes 2023</p>
+    </div>
+  </footer>
+  <button id="scrollup-button" onclick="goToTop()">Вверх</button>
+</body>
+<section>
+  <div id="overlay"></div>
+  <!-- окно "Войдите в профиль" -->
+  <form id="autorizationForm" style="display: none;">
+    <div class="autorization-window container-form">
+      <input class="autorization-window__exit-button" id="autorizationExitButton" type="image" src="./img/exit-button.svg" alt="Закрыть">
+      <h3 class="autorization-window__title">Войдите в профиль</h3>
+      <p class="autorization-window__description">Добавлять рецепты могут только зарегистрированные<br>пользователи.
+      </p>
+      <div class="autorization-window__button-container">
+        <button class="autorization-window__button" id="autorizationButtonToLogin">Войти</button>
+        <button class="autorization-window__button--other" id="autorizationButtonToRegistration">Регистрация</button>
+      </div>
+    </div>
+  </form>
+
+
+  <!-- "окно Регистрация" -->
+  <form id="registrationForm" style="display: none;">
+    <div class="registration-window container-form">
+      <input class="registration-window__exit-button" id="registrationButtonExit" type="image"
+        src="./img/exit-button.svg" alt="Закрыть">
+      <h3 class="registration-window__title">Регистрация</h3>
+      <div class="registration-window-content">
+        <input class="registration-window__name" id="inputName" type="text" placeholder="Имя" />
+        <input class="registration-window__login" id="inputLogin" type="text" placeholder="Логин" />
+
+        <div class="registration-window__password ">
+          <input class="registration-window__password-input" type="password" placeholder="Пароль " id="registrationPassword" name="password" required>
+          <input class="registration-window__password-repite" type="password" placeholder="Повторите пароль " id="registrationPasswordConfirm" name="password" required>
+        </div>
+        <p class="registration-window_password-desc">Минимум 8 символов</p>
+      </div>
+      <div class="registration-window__button-wrapper ">
+        <button class="registration-window__button" id="signupButton" type="submit"
+          name="registration-window__button">Зарегистрироваться</button>
+        <button class="registration-window__button--other" id="registrationButtonCancel" type="cancel"
+          name="registration-window__button--other">Отмена</button>
+      </div>
+      <button class="registration-window__link" id="HaveAccount" href="#">У меня уже есть аккаунт</button>
+    </div>
+  </form>
+  <!-- окно Войти -->
+  <form id="loginForm" style="display: none;">
+    <div class="login-window container-form">
+      <input class="login-window__exit-button" id="loginExit" type="image" src="./img/exit-button.svg" alt="Закрыть">
+      <h3 class="login-window__title">Войти</h3>
+      <div class="login-window-content">
+        <input class="login-window__login" type="text" placeholder="Логин" />
+
+        <div class="login-window__password ">
+          <input class="login-window__password-input"  name="password" type="password" placeholder="Пароль " id="pass" required>
+        </div>
+      </div>
+      <div class="login-window__button-wrapper ">
+        <button class="login-window__button" type="submit" name="login-window__button">Войти</button>
+        <button class="login-window__button--other" type="cancel" name="login-window__button--other"
+          id="loginButtonCancel">Отмена</button>
+      </div>
+      <button class="login-window__link" name="login-window__link" id="NoAccountButton">У меня еще нет аккаунта</button>
+    </div>
+  </form>
+</section>
+
 </html>

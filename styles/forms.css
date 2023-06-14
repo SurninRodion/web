@@ -1,0 +1,496 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Bold.woff2) format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat500';
+    src: url(../fonts/Montserrat-Medium.woff2) format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Regular.woff2) format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-SemiBold.woff2) format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url(../fonts/Mulish-Regular-400.woff) format('woff');
+    font-weight: 400;
+    font-display: swap;
+}
+/* фон за окнами на странице
+body {
+    background-color: gray;
+} */
+/* контейнер для всех окон */
+.container-form {
+
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+
+}
+/* окно авторизации */
+.autorization-window {
+    background-color: #ffffff;
+    position: absolute;
+    width: 700px;
+    height: 336px;
+    display: block;
+    border-radius: 16px;
+    margin: auto;
+    top: 150px;
+    right: 380px;
+}
+/* кнопка закрыть в окне авторизации */
+.autorization-window__exit-button {
+    display: flex;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+/* заголовок окна авторизации */
+.autorization-window__title {
+    width: 515px;
+    height: 30px;
+    margin: 0;
+    Font-family: 'Montserrat';
+    Font-style: Bold;
+    Font-size: 24px;
+    Line-height: 30px;
+    Line-height: 103%;
+    text-align: Left;
+    vertical-align: top;
+    padding-top: 60px;
+    padding-left: 60px;
+    padding-bottom: 30px;
+}
+/* описание окна авторизации */
+.autorization-window__description {
+    margin-top: 30px;
+    margin-bottom: 0px;
+    /* width: 577px; */
+    height: 56px;
+    Font-family: Montserrat;
+    Font-size: 18px;
+    line-height: 28px;
+    Line-height: 128%;
+    text-align:left;
+    vertical-align: Top;
+    padding-left: 60px;
+    
+}
+/* обёртка кнопок для окна авторизации */
+.autorization-window__button-container {
+    padding-top: 40px;
+    display: flex;
+    gap: 24px;
+    padding-left: 60px;
+}
+/* кнопка в окне авторизации */
+.autorization-window__button {
+    background-color: #FDB100;
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    min-height: 60px;
+    min-width: 278px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Эффект наведения на кнопку */
+.autorization-window__button:hover {
+    color: #fdb100;
+    background-color: #ffffff;
+    border: 1px solid #fdb100;
+}
+
+/* тут свойства для кнопки с модификатором */
+.autorization-window__button--other {
+    background-color: transparent;
+    color: #FDB100;
+    border: 1px solid #FDB100;
+    border-radius: 16px;
+    min-height: 60px;
+    min-width: 278px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+}
+/* свойство для кнопки с модификатором при наведении */
+.autorization-window__button--other:hover {
+    color: #ffffff;
+    background-color: #fdb100;
+}
+/* окно регистрации */
+.registration-window {
+    background-color: #ffffff;
+    position: absolute;
+    /* width: 700px; */
+    height: 563px;
+    display: block;
+    border-radius: 16px;
+    margin: auto;
+    top: 150px;
+    left: 370px;
+}
+
+/* кнопка выхода в окне регистрации */
+.registration-window__exit-button {
+    display: flex;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+/* заголовок в окне регистрации */
+.registration-window__title {
+    width: 515px;
+    height: 30px;
+    margin: 0;
+    Font-family: 'Montserrat';
+    Font-style: Bold;
+    Font-size: 24px;
+    Line-height: 30px;
+    Line-height: 103%;
+    text-align: Left;
+    vertical-align: top;
+    padding-top: 60px;
+    padding-left: 60px;
+}
+/* своего рода контейнер, для выравнивания инпутов в окне регистрации */
+.registration-window-content {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+/* поле ввода именя в окне регистрации */
+.registration-window__name {
+    height: 50px;
+    width: 580px;
+    background: white;
+    border: 1px solid rgba(145, 150, 161, 0.4);
+    box-shadow: 0px 8px 42px rgba(34, 39, 47, 0.04);
+    border-radius: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #808080;
+    padding-left: 32px;
+    margin-top: 47px;
+}
+/* поле ввода логина в окне регистрации */
+.registration-window__login {
+    height: 50px;
+    width: 580px;
+    background: white;
+    border: 1px solid rgba(145, 150, 161, 0.4);
+    box-shadow: 0px 8px 42px rgba(34, 39, 47, 0.04);
+    border-radius: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #808080;
+    padding-left: 32px;
+    margin-top: 20px;
+}
+/* контейнер для полей ввода пароля, чтобы их выравнивать в окне регистрации */
+.registration-window__password {
+    display: flex;
+    gap: 24px;
+    margin-top: 20px;
+}
+/* поле ввода пароля в окне регистрации */
+.registration-window__password-input {
+    height: 50px;
+    width: 278px;
+    background: white;
+    border: 1px solid rgba(145, 150, 161, 0.4);
+    box-shadow: 0px 8px 42px rgba(34, 39, 47, 0.04);
+    border-radius: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #808080;
+    padding-left: 32px;
+}
+/* Напоминалка о количестве символов в пароле */
+.registration-window_password-desc {
+    width: 276px;
+    height: 28px;
+  
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 28px;
+  
+    display: flex;
+    align-items: center;
+  
+    color: rgba(37, 41, 45, 0.3);
+  }
+
+/* поле ввода подтверждения пароля в окне регистрации */
+.registration-window__password-repite {
+    height: 50px;
+    width: 278px;
+    background: white;
+    border: 1px solid rgba(145, 150, 161, 0.4);
+    box-shadow: 0px 8px 42px rgba(34, 39, 47, 0.04);
+    border-radius: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #808080;
+    padding-left: 32px;
+}
+/* обёртка для кнопок в окне регистрации */
+.registration-window__button-wrapper {
+    padding-top: 40px;
+    display: flex;
+    gap: 24px;
+    padding-left: 60px;
+}
+/* кнопка в окне регистрации */
+.registration-window__button {
+    background-color: #FDB100;
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    min-height: 60px;
+    min-width: 278px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Эффект наведения на кнопку */
+.registration-window__button:hover {
+    color: #fdb100;
+    background-color: #ffffff;
+    border: 1px solid #fdb100;
+}
+/* кнопка с модификатором, т.е кнопка"Отмена" */
+.registration-window__button--other {
+    background-color: transparent;
+    color: #FDB100;
+    border: 1px solid #FDB100;
+    border-radius: 16px;
+    min-height: 60px;
+    min-width: 278px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+}
+/* эффект наведения на кнопку с модификатором */
+.registration-window__button--other:hover {
+    color: #ffffff;
+    background-color: #fdb100;
+}
+/* Ссылка на окно входа */
+.registration-window__link {
+    position: absolute;
+    width: 237px;
+    height: 26px;
+    text-align: center;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+
+    color: #FDB100;
+    bottom: 60px;
+    border-bottom: 2px dashed;
+    left: 231px;
+    text-decoration: none;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+/* окно входа в аккаунт */
+.login-window {
+    background-color: #ffffff;
+    position: absolute;
+    /* width: 700px; */
+    height: 479px;
+    display: block;
+    border-radius: 16px;
+    margin: auto;
+    top: 150px;
+    left: 370px;
+}
+/* кнопка выхода из окна входа в аккаунт */
+.login-window__exit-button {
+    display: flex;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+/* заголовок в окне входа в аккаунт */
+.login-window__title {
+    width: 515px;
+    height: 30px;
+    margin: 0;
+    Font-family: 'Montserrat';
+    Font-style: Bold;
+    Font-size: 24px;
+    Line-height: 30px;
+    Line-height: 103%;
+    text-align: Left;
+    vertical-align: top;
+    padding-top: 60px;
+    padding-left: 60px;
+}
+/* контейнер в окне входа в аккаунт для выравнивания инпутов */
+.login-window-content {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 50px;
+}
+
+/* поле ввода логина в окне входа в аккаунт  */
+.login-window__login {
+    height: 50px;
+    width: 580px;
+    background: white;
+    border: 1px solid rgba(145, 150, 161, 0.4);
+    box-shadow: 0px 8px 42px rgba(34, 39, 47, 0.04);
+    border-radius: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #808080;
+    padding-left: 32px;
+    margin-top: 20px;
+}
+/* контейнер для выравнивания полей в окне входа в аккаунт */
+.login-window__password {
+    display: flex;
+    gap: 24px;
+    margin-top: 20px;
+}
+/* поле ввода пароля в окне входа в аккаунт */
+.login-window__password-input {
+    height: 50px;
+    width: 580px;
+    background: white;
+    border: 1px solid rgba(145, 150, 161, 0.4);
+    box-shadow: 0px 8px 42px rgba(34, 39, 47, 0.04);
+    border-radius: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #808080;
+    padding-left: 32px;
+}
+
+/* обёртка для кнопок в окне входа в аккаунт */
+.login-window__button-wrapper {
+    padding-top: 40px;
+    display: flex;
+    gap: 24px;
+    padding-left: 60px;
+}
+/* Кнопка войти в окне входа в аккаунт */
+.login-window__button {
+    background-color: #FDB100;
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    min-height: 60px;
+    min-width: 278px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Эффект наведения на кнопку войти */
+.login-window__button:hover {
+    color: #fdb100;
+    background-color: #ffffff;
+    border: 1px solid #fdb100;
+}
+/* кнопка отмена в окне входа в аккаунт */
+.login-window__button--other {
+    background-color: transparent;
+    color: #FDB100;
+    border: 1px solid #FDB100;
+    border-radius: 16px;
+    min-height: 60px;
+    min-width: 278px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+}
+/* эффект наведения на кнопку отмена в окне входа в аккаунт */
+.login-window__button--other:hover {
+    color: #ffffff;
+    background-color: #fdb100;
+}
+/* ссылка на окно регистрации в окне входа в аккаунт */
+.login-window__link {
+    position: absolute;
+    width: 242px;
+    height: 28px;
+    text-align: center;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+
+    color: #FDB100;
+    bottom: 60px;
+    border-bottom: 2px dashed;
+    left: 231px;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+}
