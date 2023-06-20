@@ -221,6 +221,129 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.style.display = 'none';
   });
 
+// Определяем элементы для отправки формы и валидации
+const form = document.querySelector('#registrationForm');
+const nameInput = document.getElementById('inputName');
+const loginInput = document.getElementById('inputLogin');
+const passwordInput = document.getElementById('registrationPassword');
+const passwordConfirmInput = document.getElementById('registrationPasswordConfirm');
 
+// Функция для установки куки
+function setCookie(name, value, days) {
+  const date = new Date();
+  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+  const expires = "; expires=" + date.toUTCString();
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+// Функция для сохранения формы в куки
+function saveCookies() {
+  setCookie('name', nameInput.value, 1);
+  setCookie('login', loginInput.value, 1);
+  setCookie('registrationPassword', passwordInput.value, 1);
+  setCookie('registrationPasswordConfirm', passwordConfirmInput.value, 1);
+}
+// Функция для получения куки
+function getCookie(name) {
+  const nameEQ = name + "=";
+  const cookiesArray = document.cookie.split(';');
+  for (let i = 0; i < cookiesArray.length; i++) {
+    let c = cookiesArray[i];
+    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+
+// Функция для загрузки формы из куки
+function loadCookies() {
+  nameInput.value = getCookie('name') || '';
+  loginInput.value = getCookie('login') || '';
+  passwordInput.value = getCookie('password') || '';
+  passwordConfirmInput.value = getCookie('passwordConfirm') || '';
+}
+// Вызываем функцию загрузки формы при загрузке страницы
+window.addEventListener('DOMContentLoaded', loadCookies);
+
+// Функция для валидации имени
+function validateName() {
+  if (!nameInput.value) {
+  alert('Введите имя');
+  return false;
+  } else if (!/^[a-zA-Z]+$/.test(nameInput.value)) {
+  alert('Имя должно содержать только буквы');
+  return false;
+  }
+  return true;
+  }
+
+ // Функция для валидации логина
+function validateLogin() {
+  if (!loginInput.value) {
+  alert('Введите логин');
+  return false;
+  } else if (!loginInput.value.includes('@')) {
+  alert('Логин должен содержать символ @');
+  return false;
+  } else if (!/^[^@]+@[^@]+.[a-zA-Z]{2,}$/.test(loginInput.value)) {
+  alert('Логин должен быть в формате example@domain.com');
+  return false;
+  }
+  return true;
+  }
+
+ // Функция для валидации пароля
+function validatePassword() {
+if (passwordInput.value.length < 8) {
+alert('Пароль должен содержать минимум 8 символов');
+return false;
+}
+return true;
+}
+
+// Функция для валидации подтверждения пароля
+function validatePasswordConfirm() {
+if (passwordInput.value !== passwordConfirmInput.value) {
+alert('Пароли не совпадают');
+return false;
+}
+return true;
+}
+
+// Функция для вывода данных
+function displayData() {
+const data = {
+name: nameInput.value,
+login: loginInput.value,
+};
+// динамическое обновление содержимого
+document.getElementById('registrationResult').innerHTML = `
+  <h2>Результат регистрации</h2>
+  <ul>
+    <li><span>Имя:</span> ${data.name}</li>
+    <li><span>Логин:</span> ${data.login}</li>
+  </ul>
+`;
+}
+
+// Функция для обработки отправки формы
+function SubmitForm(event) {
+  event.preventDefault();
+  saveCookies();
+  
+  // Вызов всех функций валидации
+  const isNameValid = validateName();
+  const isLoginValid = validateLogin();
+  const isPasswordValid = validatePassword();
+  const isPasswordConfirmValid = validatePasswordConfirm();
+  
+  // Если все поля прошли валидацию, вывести данные о регистрации
+  if (isNameValid && isLoginValid && isPasswordValid && isPasswordConfirmValid) {
+  displayData();
+  form.reset();
+  }
+  }
+  // Вызываем функцию отправки формы 
+  form.addEventListener('submit', SubmitForm);
 })
 
