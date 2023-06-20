@@ -108,8 +108,31 @@ document.addEventListener('DOMContentLoaded', function () {
   // кнопка войти на первой секции страницы, которая ведёт на форму входа
   var topBlock_loginButton = document.getElementById('topBlock_loginButton');
 
+  var signupButton = document.getElementById('signupButton');
+
+  // const addButton = document.querySelector('#add_button');
+  
+  
+  
+  // Открытие формы входа при нажатии на кнопку "войти" в первой секции сайта
+    topBlock_loginButton.addEventListener('click', function () {
+    const popup2 = document.querySelector('.login-window');
+    popup2.classList.add('show-popup');
+    loginForm.style.display = 'block';
+    overlay.style.display = 'block';
+    });
+
+   // Кнопка входа в шапке сайта
+   header__login_button.addEventListener('click', function () {
+    const popup2 = document.querySelector('.login-window');
+    popup2.classList.add('show-popup');
+    loginForm.style.display = 'block';
+    overlay.style.display = 'block';
+  });
   // Открытие формы авторизации
   add_button.addEventListener('click', function () {
+    const popup = document.querySelector('.authorization-window');
+    popup.classList.add('show-popup');
     autorizationForm.style.display = 'block';
     overlay.style.display = 'block';
   });
@@ -118,20 +141,25 @@ document.addEventListener('DOMContentLoaded', function () {
     event.preventDefault();
     autorizationForm.style.display = 'none';
     overlay.style.display = 'none';
+    popup.classList.remove('show-popup');
   });
-// переход из формы авторизации в форму входа
+  // переход из формы авторизации в форму входа
   autorizationButtonToLogin.addEventListener('click', function () {
     event.preventDefault();
     autorizationForm.style.display = 'none';
     overlay.style.display = 'block';
     loginForm.style.display = 'block';
+    popup.classList.remove('show-popup');
   });
-// переход из формы авторизации в форму регистрации
+  // переход из формы авторизации в форму регистрации
   autorizationButtonToRegistration.addEventListener('click', function () {
+    const popup3 = document.querySelector('.registration-window');
+    popup3.classList.add('show-popup');
     event.preventDefault();
     autorizationForm.style.display = 'none';
     overlay.style.display = 'block';
     registrationForm.style.display = 'block';
+    popup.classList.remove('show-popup');
   });
 
    // Обработка кнопки "крестик"
@@ -144,9 +172,11 @@ document.addEventListener('DOMContentLoaded', function () {
     registrationForm.style.display = 'none';
     overlay.style.display = 'none';
   });
-// Если еще нет аккаунта - переход на форму регистрации
+  // Если еще нет аккаунта - переход на форму регистрации
   NoAccountButton.addEventListener('click', function () {
     event.preventDefault();
+    const popup3 = document.querySelector('.registration-window');
+    popup3.classList.add('show-popup');
     loginForm.style.display = 'none';
     overlay.style.display = 'block';
     registrationForm.style.display = 'block';
@@ -154,15 +184,13 @@ document.addEventListener('DOMContentLoaded', function () {
   // Если есть аккаунт - переход на форму входа
   HaveAccount.addEventListener('click', function () {
     event.preventDefault();
+    const popup2 = document.querySelector('.login-window');
     registrationForm.style.display = 'none';
     overlay.style.display = 'block';
     loginForm.style.display = 'block';
+    popup2.classList.add('show-popup');
   });
-  // Кнопка входа в шапке сайта
-  header__login_button.addEventListener('click', function () {
-    loginForm.style.display = 'block';
-    overlay.style.display = 'block';
-  });
+ 
   // Обработка кнопки "крестик"
     loginButtonExit.addEventListener('click', function () {
       loginForm.style.display = 'none';
@@ -174,18 +202,15 @@ document.addEventListener('DOMContentLoaded', function () {
       overlay.style.display = 'none';
     });
     //////////////////////////////////////////////////////////////////////////
-    // Открытие формы входа при нажатии на кнопку "войти" в первой секции сайта
-    topBlock_loginButton.addEventListener('click', function () {
-      loginForm.style.display = 'block';
-      overlay.style.display = 'block';
-    });
+    
+    
     // крестик или кнопка закрыть
     loginButtonExit.addEventListener('click', function () {
       loginForm.style.display = 'none';
       overlay.style.display = 'none';
     });
 
-// Обработка кнопки "крестик"
+  // Обработка кнопки "крестик"
   loginButtonExit.addEventListener('click', function () {
     loginForm.style.display = 'none';
     overlay.style.display = 'none';
@@ -196,58 +221,6 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.style.display = 'none';
   });
 
-// валидация полей
-var signupButton = document.getElementById('signupButton');
-// обработчик события на кнопку регистрации
-signupButton.addEventListener('click', function(event) {
-  event.preventDefault();
 
-  var inputName = document.getElementById('inputName').value;
-  var inputLogin = document.getElementById('inputLogin').value;
-  var registrationPassword = document.getElementById('registrationPassword').value;
-  var registrationPasswordConfirm = document.getElementById('registrationPasswordConfirm').value;
+})
 
-  // проверка на пустой логин, пароль и подтверждение пароля
-  if (!inputName || !inputLogin || !registrationPassword ||!registrationPasswordConfirm) {
-    alert('Введите имя, логин, пароль и подтверждение пароля');
-    return;
-  }
-
-  // проверка длины пароля
-  if (registrationPassword.length < 8) {
-    alert('Пароль должен содержать не менее 8 символов');
-    return;
-  }
-
-  // проверка на совпадение паролей
-  if (registrationPassword !== registrationPasswordConfirm) {
-    alert('Пароли не совпадают');
-    return;
-  }
-
-  // // проверка на существование логина
-  // if (checkUsernameExists(inputLogin)) {
-  //   alert('Логин уже существует');
-  //   return;
-  // }
-
-// сохраняем данные формы в куки
-// document.cookie = 'name=' + inputName + '; expires=' + new Date(new Date().getTime() + 24 * 60 * 60 * 1000).toUTCString();
-// document.cookie = 'login=' + inputLogin + '; expires=' + new Date(new Date().getTime() + 24 * 60 * 60 * 1000).toUTCString();
-// document.cookie = 'password=' + registrationPassword + '; expires=' + new Date(new Date().getTime() + 24 * 60 * 60 * 1000).toUTCString();
-
-// // получаем данные из куки
-// var name = getCookie('name');
-// var login = getCookie('login');
-// var password = getCookie('password');
-
-// // заполняем поля формы значениями из куки
-// document.getElementById('inputName').value = name;
-// document.getElementById('inputLogin').value = login;
-// document.getElementById('registrationPassword').value = password;
-// document.getElementById('registrationPasswordConfirm').value = password;
-  // отправка формы
-  registrationForm.submit();
-});
-
-  })

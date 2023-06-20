@@ -45,17 +45,35 @@ body {
 
 }
 /* окно авторизации */
-.autorization-window {
+.authorization-window {
     background-color: #ffffff;
-    position: absolute;
+    position: fixed;
     width: 700px;
     height: 336px;
-    display: block;
+    display: none;
     border-radius: 16px;
     margin: auto;
-    top: 150px;
-    right: 380px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+
+.authorization-window.show-popup {
+  display: block;
+  animation: popup-show 0.5s ease-in-out forwards;
 }
+
+@keyframes popup-show {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 /* кнопка закрыть в окне авторизации */
 .autorization-window__exit-button {
     display: flex;
@@ -147,16 +165,32 @@ body {
 /* окно регистрации */
 .registration-window {
     background-color: #ffffff;
-    position: absolute;
-    /* width: 700px; */
+    position: fixed;
+    width: 700px;
     height: 563px;
     display: block;
     border-radius: 16px;
     margin: auto;
-    top: 150px;
-    left: 370px;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
+
+.registration-window.show-popup {
+  display: block;
+  animation: popup-show3 0.5s ease-in-out forwards;
+}
+@keyframes popup-show3 {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
 /* кнопка выхода в окне регистрации */
 .registration-window__exit-button {
     display: flex;
@@ -345,15 +379,33 @@ body {
 /* окно входа в аккаунт */
 .login-window {
     background-color: #ffffff;
-    position: absolute;
-    /* width: 700px; */
+    position: fixed;
+    width: 700px;
     height: 479px;
-    display: block;
+    display:none;
     border-radius: 16px;
     margin: auto;
-    top: 150px;
-    left: 370px;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
+
+.login-window.show-popup {
+  display: block;
+  animation: popup-show2 0.5s ease-in-out forwards;
+}
+
+@keyframes popup-show2 {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 /* кнопка выхода из окна входа в аккаунт */
 .login-window__exit-button {
     display: flex;
@@ -494,3 +546,56 @@ body {
     border-left: none;
     border-right: none;
 }
+
+#output {
+    background-color: #ffffff;
+    position: fixed;
+    width: 700px;
+    height: 336px;
+    display: block;
+    border-radius: 16px;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+#output h2 {
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#output ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#output li {
+  margin-bottom: 5px;
+}
+
+#output li span:first-child {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#output li span:last-child {
+  color: #777;
+}
+
+.registration {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    padding-right: 20px;
+  }
+  
+  .registration-result {
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+  }

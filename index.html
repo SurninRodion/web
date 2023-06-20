@@ -167,65 +167,74 @@
 <section>
   <div id="overlay"></div>
   <!-- окно "Войдите в профиль" -->
-  <form id="autorizationForm" style="display: none;">
-    <div class="autorization-window container-form">
-      <input class="autorization-window__exit-button" id="autorizationExitButton" type="image" src="./img/exit-button.svg" alt="Закрыть">
-      <h3 class="autorization-window__title">Войдите в профиль</h3>
-      <p class="autorization-window__description">Добавлять рецепты могут только зарегистрированные<br>пользователи.
-      </p>
-      <div class="autorization-window__button-container">
-        <button class="autorization-window__button" id="autorizationButtonToLogin">Войти</button>
-        <button class="autorization-window__button--other" id="autorizationButtonToRegistration">Регистрация</button>
+  <div class="authorization-window" id="popup">
+    <form id="autorizationForm" style="display: none;">
+      <div class="autorization-window container-form">
+        <input class="autorization-window__exit-button" id="autorizationExitButton" type="image" src="./img/exit-button.svg" alt="Закрыть">
+        <h3 class="autorization-window__title">Войдите в профиль</h3>
+        <p class="autorization-window__description">Добавлять рецепты могут только зарегистрированные<br>пользователи.
+        </p>
+        <div class="autorization-window__button-container">
+          <button class="autorization-window__button" id="autorizationButtonToLogin">Войти</button>
+          <button class="autorization-window__button--other" id="autorizationButtonToRegistration">Регистрация</button>
+        </div>
       </div>
-    </div>
-  </form>
-
+    </form>
+  </div>
 
   <!-- "окно Регистрация" -->
-  <form id="registrationForm" style="display: none;">
-    <div class="registration-window container-form">
-      <input class="registration-window__exit-button" id="registrationButtonExit" type="image"
-        src="./img/exit-button.svg" alt="Закрыть">
-      <h3 class="registration-window__title">Регистрация</h3>
-      <div class="registration-window-content">
-        <input class="registration-window__name" id="inputName" type="text" placeholder="Имя" />
-        <input class="registration-window__login" id="inputLogin" type="text" placeholder="Логин" />
+  <div class="registration">
+    <form id="registrationForm" style="display: none;" action="#" method="post">
+      <div class="registration-result" id="registrationResult"></div>
+      <div class="registration-window container-form">
+        <input class="registration-window__exit-button" id="registrationButtonExit" type="image"
+          src="./img/exit-button.svg" alt="Закрыть">
+        
+        <h3 class="registration-window__title">Регистрация</h3>
+        <div class="registration-window-content">
+          <input class="registration-window__name" id="inputName" type="text" placeholder="Имя" name="name"/>
+          <input class="registration-window__login" id="inputLogin" type="text" placeholder="Логин" name="login" />
 
-        <div class="registration-window__password ">
-          <input class="registration-window__password-input" type="password" placeholder="Пароль " id="registrationPassword" name="password" required>
-          <input class="registration-window__password-repite" type="password" placeholder="Повторите пароль " id="registrationPasswordConfirm" name="password" required>
+          <div class="registration-window__password ">
+            <input class="registration-window__password-input" type="password" placeholder="Пароль " id="registrationPassword" name="registrationPassword" required>
+            <input class="registration-window__password-repite" type="password" placeholder="Повторите пароль " id="registrationPasswordConfirm" name="registrationPasswordConfirm" required>
+          </div>
+          <p class="registration-window_password-desc">Минимум 8 символов</p>
         </div>
-        <p class="registration-window_password-desc">Минимум 8 символов</p>
+        <div class="registration-window__button-wrapper ">
+          <button class="registration-window__button" id="signupButton" type="submit"
+            name="registration-window__button">Зарегистрироваться</button>
+          <button class="registration-window__button--other" id="registrationButtonCancel" type="cancel"
+            name="registration-window__button--other">Отмена</button>
+        </div>
+        <button class="registration-window__link" id="HaveAccount" href="#">У меня уже есть аккаунт</button>
       </div>
-      <div class="registration-window__button-wrapper ">
-        <button class="registration-window__button" id="signupButton" type="submit"
-          name="registration-window__button">Зарегистрироваться</button>
-        <button class="registration-window__button--other" id="registrationButtonCancel" type="cancel"
-          name="registration-window__button--other">Отмена</button>
-      </div>
-      <button class="registration-window__link" id="HaveAccount" href="#">У меня уже есть аккаунт</button>
-    </div>
-  </form>
+    </form>
+    
+  </div>
+  
   <!-- окно Войти -->
-  <form id="loginForm" style="display: none;">
-    <div class="login-window container-form">
-      <input class="login-window__exit-button" id="loginExit" type="image" src="./img/exit-button.svg" alt="Закрыть">
-      <h3 class="login-window__title">Войти</h3>
-      <div class="login-window-content">
-        <input class="login-window__login" type="text" placeholder="Логин" />
+    
+      <form id="loginForm" style="display: none;">
+        <div class="login-window container-form">
+          <input class="login-window__exit-button" id="loginExit" type="image" src="./img/exit-button.svg" alt="Закрыть">
+          <h3 class="login-window__title">Войти</h3>
+          <div class="login-window-content">
+            <input class="login-window__login" type="text" placeholder="Логин" />
 
-        <div class="login-window__password ">
-          <input class="login-window__password-input"  name="password" type="password" placeholder="Пароль " id="pass" required>
+            <div class="login-window__password ">
+              <input class="login-window__password-input"  name="password" type="password" placeholder="Пароль " id="pass" required>
+            </div>
+          </div>
+          <div class="login-window__button-wrapper ">
+            <button class="login-window__button" type="submit" name="login-window__button">Войти</button>
+            <button class="login-window__button--other" type="cancel" name="login-window__button--other"
+              id="loginButtonCancel">Отмена</button>
+          </div>
+          <button class="login-window__link" name="login-window__link" id="NoAccountButton">У меня еще нет аккаунта</button>
         </div>
-      </div>
-      <div class="login-window__button-wrapper ">
-        <button class="login-window__button" type="submit" name="login-window__button">Войти</button>
-        <button class="login-window__button--other" type="cancel" name="login-window__button--other"
-          id="loginButtonCancel">Отмена</button>
-      </div>
-      <button class="login-window__link" name="login-window__link" id="NoAccountButton">У меня еще нет аккаунта</button>
-    </div>
-  </form>
+      </form>
+
 </section>
 
 </html>
